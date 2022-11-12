@@ -1,0 +1,54 @@
+@import "../../../styles/variables.module.scss";
+
+.navbar {
+	position: fixed;
+	z-index: 1000;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: calc(100% - $marge);
+	height: $navbar-height;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo {
+	height: 3rem;
+}
+
+.menu {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	list-style: none;
+
+	&-item {
+		margin-right: 1rem;
+		font-size: 1rem;
+		font-weight: 500;
+		color: $text-light;
+		cursor: pointer;
+		transition: all 0.3s ease-in-out;
+
+		&:hover {
+			color: $text-dark;
+		}
+	}
+
+	&-cta {
+		padding: 0.5rem 1rem;
+		border-radius: 0.5rem;
+		background-color: $accent;
+		color: $text-white;
+		font-size: 1rem;
+		font-weight: 600;
+		cursor: pointer;
+		transition: all 0.3s ease-in-out;
+
+		&:hover {
+			transform: scale(0.98);
+		}
+	}
+}

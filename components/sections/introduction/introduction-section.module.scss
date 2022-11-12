@@ -1,0 +1,79 @@
+.section {
+}
+
+.intro {
+	background: linear-gradient(180deg, #155a5f 0%, #0b3437 100%);
+	padding-top: 20vh;
+	padding-bottom: 50vh;
+	position: relative;
+}
+
+.text {
+	font-weight: 900;
+	font-size: 3rem;
+	max-width: 45vw;
+	margin-left: 15vw;
+	padding-bottom: 3rem;
+	color: #fff;
+}
+
+.year {
+	position: absolute;
+	bottom: 0;
+	margin-left: 15vw;
+	font-weight: 900;
+	font-size: 20rem;
+	color: #fff;
+	font-style: italic;
+	line-height: 15rem;
+}
+
+.joggeuse {
+	position: absolute;
+	bottom: 0;
+	margin-left: 15vw;
+	transform: translateY(50%);
+}
+
+.description {
+	margin-top: 7rem;
+	margin-bottom: 100vh;
+	width: 45vw;
+	right: 0;
+	margin-left: auto;
+	height: 40vh;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+
+	&-numbers {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&-number {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 2rem;
+
+		&-text {
+			font-size: 4rem;
+			font-weight: 900;
+			color: #000;
+			font-style: italic;
+		}
+		&-label {
+			font-size: 1.5rem;
+			color: gray;
+			font-weight: 900;
+			font-style: italic;
+		}
+	}
+
+	&-text {
+		margin-right: 10rem;
+		margin-left: 5rem;
+		font-size: 1.5rem;
+		color: lightgray;
+	}
+}
