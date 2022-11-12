@@ -1,7 +1,84 @@
+@import "../../../styles/variables.module.scss";
 
+$header-height: 100vh;
 
 .header {
-    
-    height: 100vh;
-    background: url(/hero.jpg) no-repeat center bottom;
+	height: $header-height;
+	position: relative;
+	// background: url(/hero.jpg) no-repeat center bottom;
 }
+
+.plans {
+	position: absolute;
+	bottom: 0;
+	width: 100vw;
+	height: 100%;
+
+	:global {
+		img {
+			width: 100vw;
+			position: absolute;
+			bottom: 0;
+			object-fit: cover;
+			height: 100%;
+			pointer-events: none;
+		}
+	}
+}
+
+.first-plan {
+	// background-color: red;
+	position: relative;
+	height: 100%;
+}
+
+// .second-plan {
+// 	transform: translateY(70vh);
+// }
+
+.title-plan {
+	width: 100vw;
+	position: absolute;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	:global {
+		h1 {
+			font-size: 4rem;
+			// color: white;
+			font-weight: 900;
+			text-align: center;
+			text-transform: uppercase;
+			// font-style: italic;
+			// color: $illustration-color-sun;
+			margin-bottom: 5rem;
+
+			// background gradient on text
+			background: -webkit-linear-gradient(
+				-90deg,
+				$illustration-color-sun,
+				$illustration-color-sky 100%
+			);
+			background-size: cover;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+			text-fill-color: transparent;
+		}
+	}
+}
+
+.background {
+	position: absolute;
+	top: 62vh;
+	height: 100vh;
+	width: 100vw;
+	background-color: #155a5f;
+}
+
+// .third-plan {
+// 	display: none;
+// 	background-color: green;
+// }

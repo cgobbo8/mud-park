@@ -1,20 +1,30 @@
+@import "../../../styles/variables.module.scss";
+
 .section {
 }
 
 .intro {
 	background: linear-gradient(180deg, #155a5f 0%, #0b3437 100%);
-	padding-top: 20vh;
+	padding-top: 0vh;
 	padding-bottom: 50vh;
 	position: relative;
 }
 
 .text {
 	font-weight: 900;
-	font-size: 3rem;
+	font-size: $text-huge-size;
 	max-width: 45vw;
 	margin-left: 15vw;
 	padding-bottom: 3rem;
-	color: #fff;
+	color: $white;
+
+	// clip background gradient on text
+
+	background: linear-gradient(180deg, #17f0ff 0%, #155a5f 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	text-fill-color: transparent;
 }
 
 .year {
@@ -25,12 +35,17 @@
 	font-size: 20rem;
 	color: #fff;
 	font-style: italic;
-	line-height: 15rem;
+	line-height: 13rem;
+	:global {
+		p {
+			padding-right: 5rem;
+		}
+	}
 }
 
 .joggeuse {
 	position: absolute;
-	bottom: 0;
+	bottom: -40vh;
 	margin-left: 15vw;
 	transform: translateY(50%);
 }
@@ -59,12 +74,12 @@
 		&-text {
 			font-size: 4rem;
 			font-weight: 900;
-			color: #000;
+			color: $text-color-black;
 			font-style: italic;
 		}
 		&-label {
 			font-size: 1.5rem;
-			color: gray;
+			color: $text-color-grey;
 			font-weight: 900;
 			font-style: italic;
 		}
@@ -74,6 +89,6 @@
 		margin-right: 10rem;
 		margin-left: 5rem;
 		font-size: 1.5rem;
-		color: lightgray;
+		color: $text-color-light;
 	}
 }

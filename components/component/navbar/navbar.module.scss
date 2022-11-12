@@ -12,6 +12,18 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+
+	border-radius: 16px;
+
+	transition: all 0.3s ease-in-out;
+
+	&.isNotOnTop {
+		padding: 2rem 2rem;
+		background-color: rgba(214, 214, 214, 0.461);
+		margin-top: 1rem;
+		border-radius: 16pxc;
+		backdrop-filter: blur(10px);
+	}
 }
 
 .logo {
@@ -25,15 +37,15 @@
 	list-style: none;
 
 	&-item {
-		margin-right: 1rem;
+		margin-right: 2rem;
 		font-size: 1rem;
-		font-weight: 500;
-		color: $text-light;
+		font-weight: 600;
+		color: $text-color-dark;
 		cursor: pointer;
 		transition: all 0.3s ease-in-out;
 
 		&:hover {
-			color: $text-dark;
+			color: $text-color-dark;
 		}
 	}
 
@@ -41,11 +53,18 @@
 		padding: 0.5rem 1rem;
 		border-radius: 0.5rem;
 		background-color: $accent;
-		color: $text-white;
+		color: $white;
 		font-size: 1rem;
 		font-weight: 600;
 		cursor: pointer;
 		transition: all 0.3s ease-in-out;
+
+		&-ticket {
+			color: #fff;
+			height: 0.7rem;
+			transform: rotate(130deg);
+			margin-right: 0.5em;
+		}
 
 		&:hover {
 			transform: scale(0.98);

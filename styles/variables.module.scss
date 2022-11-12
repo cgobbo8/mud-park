@@ -1,23 +1,46 @@
 $primary-color: #ff00cc;
-$accent : #FF7C5B;
+$accent: #ff7c5b;
+$white: #fff;
+$black: #000;
+$grey: #f2f2f2;
 
-$background-color: #F0F0F0;
-$background-light: #F0F0F0;
-$background-color-blur: #f0f0f02c;
-$background-card : #DFDFDF;
-$background-card-light : #e8e8e8;
-$background-card-hover : #e8e8e8;
+$text-color-black: #000;
+$text-color-grey: #8f8f8f;
+$text-color-light: #eaeaea;
+$text-color-dark: #0e4351;
 
-$text-light : #A7A7A7;
-$text-dark :  #1D1D1D;
+$illustration-color-dark: #0e4351;
+$illustration-color-sky: #bbf4e3;
+$illustration-color-sun: #b99c64;
+$illustration-color-field: #e6e1b7;
+$illustration-color-yellow: #f8fedc;
 
-$text-paragraph : #A7A7A7;
-$text-title :  #1D1D1D;
-$text-white :  #fff;
+$mud-color-red: #a54c5b;
+$mud-color-orange: #e99440;
+$mud-color-salmon: #84be9c;
 
-$marge : 4rem;
-$navbar-height : 80px;
+$backgrond-dark: #211e28;
 
-$espacement : 4rem;
+$title-1-size: 4rem;
+$title-1-transformation: capitalize;
+$title-1-weight: 900;
+$title-1-style: italic;
+$title-1-color: $text-color-dark;
 
+$title-2-size: 10rem;
+$title-2-transformation: capitalize;
+$title-2-weight: 900;
+$title-2-style: italic;
+$title-2-color: $text-color-light;
 
+$title-3-size: 4rem;
+$title-3-transformation: none;
+$title-3-weight: 900;
+$title-3-style: italic;
+$title-3-color: $text-color-black;
+
+$text-huge-size: 3rem;
+$text-paragraph: 1rem;
+
+$marge: 4rem;
+$navbar-height: 80px;
