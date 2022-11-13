@@ -19,16 +19,16 @@ $mud-color-red: #a54c5b;
 $mud-color-orange: #e99440;
 $mud-color-salmon: #84be9c;
 
-$backgrond-dark: #211e28;
+$background-dark: #211e28;
 
 $title-1-size: 4rem;
-$title-1-transformation: capitalize;
+$title-1-transformation: uppercase;
 $title-1-weight: 900;
 $title-1-style: italic;
 $title-1-color: $text-color-dark;
 
 $title-2-size: 10rem;
-$title-2-transformation: capitalize;
+$title-2-transformation: uppercase;
 $title-2-weight: 900;
 $title-2-style: italic;
 $title-2-color: $text-color-light;
@@ -44,3 +44,6 @@ $text-paragraph: 1rem;
 
 $marge: 4rem;
 $navbar-height: 80px;
+
+$section-margin-top: 20rem;
+$section-padding: 0 $marge;

@@ -4,7 +4,8 @@
 }
 
 .intro {
-	background: linear-gradient(180deg, #155a5f 0%, #0b3437 100%);
+	background-color: #16585c;
+	// background: linear-gradient(180deg, #16585c 0%, #073247 100%);
 	padding-top: 0vh;
 	padding-bottom: 50vh;
 	position: relative;
@@ -18,13 +19,12 @@
 	padding-bottom: 3rem;
 	color: $white;
 
-	// clip background gradient on text
-
-	background: linear-gradient(180deg, #17f0ff 0%, #155a5f 100%);
+	background: linear-gradient(180deg, #17f0ff 0%, #16585c 80%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	background-clip: text;
 	text-fill-color: transparent;
+	background-attachment: fixed;
 }
 
 .year {
@@ -52,7 +52,6 @@
 
 .description {
 	margin-top: 7rem;
-	margin-bottom: 100vh;
 	width: 45vw;
 	right: 0;
 	margin-left: auto;

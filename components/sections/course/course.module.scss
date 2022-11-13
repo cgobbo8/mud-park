@@ -1,0 +1,32 @@
+@import "../../../styles/variables.module.scss";
+
+.section {
+	margin-top: $section-margin-top;
+	padding: $section-padding;
+}
+
+.title {
+	font-size: $title-2-size;
+	color: $title-2-color;
+	font-weight: $title-2-weight;
+	font-style: $title-2-style;
+	text-transform: $title-2-transformation;
+}
+
+.course-content {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	align-items: center;
+	margin-top: 2rem;
+
+	&-text {
+		width: 40%;
+		margin-right: 2rem;
+		color: $text-color-grey;
+	}
+
+	&-image {
+		height: 500px;
+	}
+}

@@ -1,0 +1,22 @@
+@import "../../../styles/variables.module.scss";
+
+.section {
+	margin-top: $section-margin-top;
+	padding: $section-padding;
+}
+
+.title {
+	font-size: $title-2-size;
+	color: $title-2-color;
+	font-weight: $title-2-weight;
+	font-style: $title-2-style;
+	text-transform: $title-2-transformation;
+}
+
+.faq {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 5rem;
+}

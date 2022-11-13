@@ -1,0 +1,88 @@
+@import "../../../styles/variables.module.scss";
+
+.faq {
+	&-item {
+		width: 100%;
+		border-bottom: 1px solid $text-color-grey;
+		&:last-child {
+			border-bottom: none;
+		}
+		padding: 1rem 0;
+		cursor: pointer;
+		transition: all 0.3s ease-in-out;
+		&:hover {
+			background-color: rgb(246, 246, 246);
+		}
+
+		&.opened {
+			background-color: rgb(246, 246, 246);
+		}
+		&-header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 100%;
+			// margin-bottom: 1rem;
+			padding: 1rem 2rem;
+
+			// padding: 2rem 0;
+			// padding-bottom: 1rem;
+		}
+		&-title {
+			font-size: 2rem;
+			color: $title-3-color;
+			font-weight: $title-3-weight;
+			font-style: $title-3-style;
+			text-transform: $title-3-transformation;
+		}
+
+		&-icon {
+			font-size: 2rem;
+			color: $text-color-grey;
+		}
+		&-content {
+			width: 100%;
+			color: $text-color-grey;
+			padding-right: 20rem;
+			padding-bottom: 2rem;
+			padding-left: 2rem;
+		}
+	}
+}
+
+.cross {
+	height: 32px;
+	width: 32px;
+	position: relative;
+
+	&.opened {
+		:global {
+			.bar {
+				&:last-child {
+					transform: translateY(-50%) rotate(0);
+				}
+			}
+		}
+	}
+
+	:global {
+		.bar {
+			background-color: $black;
+			height: 4px;
+			width: 32px;
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+			transition: all 0.3s ease-in-out;
+
+			&:first-child {
+				transform: translateY(-50%) rotate(0);
+			}
+
+			&:last-child {
+				transform: translateY(-50%) rotate(-90deg);
+			}
+		}
+	}
+}

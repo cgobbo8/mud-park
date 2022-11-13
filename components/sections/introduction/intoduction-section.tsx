@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { useParallax } from "react-scroll-parallax";
 import styles from "./introduction-section.module.scss";
 
@@ -5,6 +6,8 @@ export const IntroductionSection = () => {
 	const { ref: text1 } = useParallax<HTMLDivElement>({
 		speed: 20,
 		rootMargin: { top: 300, right: 100, bottom: 100, left: 100 },
+		onEnter: (value) => console.log("Enter"),
+		onExit: (value) => console.log("Exit"),
 	});
 
 	const { ref: joggeuse } = useParallax<HTMLImageElement>({
