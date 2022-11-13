@@ -17,16 +17,65 @@
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
-	align-items: center;
+	align-items: flex-start;
 	margin-top: 2rem;
 
 	&-text {
 		width: 40%;
 		margin-right: 2rem;
 		color: $text-color-grey;
+		margin-top: 20rem;
+
+		display: flex;
+		flex-direction: column;
+
+		&-bloc {
+			margin-bottom: 30rem;
+
+			&-title {
+				font-size: 4rem;
+				font-weight: 900;
+				font-style: italic;
+				color: $text-color-black;
+				margin-bottom: 2rem;
+				text-transform: uppercase;
+			}
+
+			&-text {
+				font-size: 1.5rem;
+				font-weight: 600;
+				color: $text-color-grey;
+			}
+		}
 	}
 
 	&-image {
+		position: sticky;
+		top: 100px;
 		height: 500px;
+	}
+}
+
+.cube {
+	width: 300px;
+	background-color: red;
+	position: sticky;
+	top: 150px;
+	height: 300px;
+
+	&.inParcours {
+		background-color: blue;
+	}
+
+	&.inObstacles {
+		background-color: green;
+	}
+
+	&.inForEveryOne {
+		background-color: yellow;
+	}
+
+	&.inKm {
+		background-color: orange;
 	}
 }

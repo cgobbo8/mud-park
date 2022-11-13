@@ -27,7 +27,6 @@ const FaqSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 				{faqContent.map((item, i) => (
 					<FaqItem key={i} label={item.label} content={item.content} />
 				))}
-				`
 			</div>
 		</section>
 	);

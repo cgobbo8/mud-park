@@ -18,18 +18,35 @@ const ContactSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 		setContactOnScreen(isIntersecting);
 	}, [isIntersecting, setContactOnScreen]);
 
+	const sendEmail = () => {
+		fetch("/api/contact", {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify({
+				name: "name",
+				email: "email",
+				message: "message",
+			}),
+		})
+			.then((response) => response.json())
+
+			.then((data) => {
+				console.log("Success:", data);
+			})
+			.catch((error) => {
+				console.error("Error:", error);
+			});
+	};
+
 	return (
 		<footer ref={ref}>
+			<img src='/premier-plan.png' className={styles.trees} alt='' />
 			<div className={styles["section"]}>
 				<div className={styles["contact-section-content"]}>
 					<h2 className={styles["contact-section-title"]}>Contact</h2>
-					<p className={styles["contact-section-text"]}>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-						tincidunt, nisl eget aliquam tincidunt, nisl nisl aliquam nisl, et
-						aliquam nisl nisl sit amet nisl. Sed tincidunt, nisl eget aliquam
-						tincidunt, nisl nisl aliquam nisl, et aliquam nisl nisl sit amet
-						nisl.
-					</p>
+					<button onClick={sendEmail}>Test email</button>
 					<div className={styles["contact-section-social"]}>
 						<a
 							className={styles["contact-section-social-link"]}

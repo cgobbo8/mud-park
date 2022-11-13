@@ -102,9 +102,22 @@ export const Navbar = ({ sectionRefs }: NavbarProps) => {
 		}
 	};
 
+	const scrollToTop = (e: React.MouseEvent<HTMLImageElement>) => {
+		e.preventDefault();
+		window.scrollTo({
+			top: 0,
+			behavior: "smooth",
+		});
+	};
+
 	return (
 		<nav className={`${styles.navbar} ${isOnTop ? "" : styles.isNotOnTop}`}>
-			<img className={styles.logo} src='/logo.svg' alt='logo' />
+			<img
+				onClick={scrollToTop}
+				className={styles.logo}
+				src='/logo.svg'
+				alt='logo'
+			/>
 			<ul className={styles.menu}>
 				<li
 					className={`${styles["menu-item"]} ${
