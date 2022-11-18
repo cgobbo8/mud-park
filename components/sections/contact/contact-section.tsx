@@ -3,6 +3,7 @@ import ScrollContext, {
 	ScrollContextType,
 } from "../../../contexts/ScrollContext";
 import { useOnScreen, UseOnScreenReturn } from "../../../hooks/useOnScreen";
+import { ContactForm } from "../../component/contact-form";
 import styles from "./contact-section.module.scss";
 
 const ContactSection = React.forwardRef<HTMLDivElement>((props, ref) => {
@@ -42,20 +43,16 @@ const ContactSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 
 	return (
 		<footer ref={ref}>
-			<img src='/premier-plan.png' className={styles.trees} alt='' />
-			<div className={styles["section"]}>
-				<div className={styles["contact-section-content"]}>
-					<h2 className={styles["contact-section-title"]}>Contact</h2>
-					<button onClick={sendEmail}>Test email</button>
-					<div className={styles["contact-section-social"]}>
-						<a
-							className={styles["contact-section-social-link"]}
-							href='https://www.facebook.com/'
-							target='_blank'
-							rel='noreferrer'
-						></a>
-					</div>
-				</div>
+			<div className={`${styles["section"]} ${styles["contact-section"]}`}>
+				<h2 className={styles["contact-title"]}>
+					Des questions ? Contactez nous !
+				</h2>
+				<ContactForm />
+				<img
+					className={styles["contact-section-image"]}
+					src='/images/mail-hero.svg'
+					alt='hero with letter'
+				/>
 			</div>
 		</footer>
 	);

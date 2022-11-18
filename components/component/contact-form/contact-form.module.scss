@@ -1,0 +1,102 @@
+@import "../../../styles/variables.module.scss";
+
+.contact-form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 50%;
+	// padding: 0 1rem;
+	margin-bottom: $marge;
+
+	&-content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+		padding: 0 1rem;
+
+		&-submit {
+			display: flex;
+			align-self: flex-end;
+			padding: 0 1rem;
+			background-color: $white;
+			padding: 1rem 1.5rem;
+			font-size: 1.5rem;
+		}
+
+		&-input {
+			width: 100%;
+			margin-bottom: 1rem;
+			display: flex;
+			flex-direction: column;
+
+			&-label {
+				font-size: 1.125rem;
+				color: $text-color-grey;
+				font-weight: $title-3-weight;
+				font-style: $title-3-style;
+				text-transform: $title-3-transformation;
+				margin-bottom: 0.5rem;
+			}
+
+			&-input {
+				width: 100%;
+				height: 3rem;
+				border: none;
+				border-bottom: 1px solid $text-color-grey;
+				background-color: transparent;
+				color: $text-color-grey;
+				font-size: 1.125rem;
+				font-weight: $title-3-weight;
+				font-style: $title-3-style;
+				text-transform: $title-3-transformation;
+				padding: 0.5rem 0;
+				transition: all 0.3s ease-in-out;
+				&:focus {
+					outline: none;
+					border-bottom: 1px solid $text-color-grey;
+				}
+			}
+
+			&-select {
+				width: 100%;
+				height: 3rem;
+				border: none;
+				border-bottom: 1px solid $text-color-grey;
+				color: $text-color-grey;
+				font-size: 1.125rem;
+				font-weight: $title-3-weight;
+				font-style: $title-3-style;
+				text-transform: $title-3-transformation;
+				// padding: 0.5rem 0;
+				transition: all 0.3s ease-in-out;
+				box-shadow: none;
+				// reset all select styles
+				appearance: none;
+				-webkit-appearance: none;
+				-moz-appearance: none;
+				background: transparent;
+
+				font-family: inherit;
+
+				&:focus {
+					outline: none;
+					border-bottom: 1px solid $text-color-grey;
+				}
+
+				&-option {
+					color: $text-color-grey;
+					font-size: 1.125rem;
+					font-weight: $title-3-weight;
+					font-style: $title-3-style;
+					text-transform: $title-3-transformation;
+					color: red;
+				}
+			}
+		}
+	}
+}

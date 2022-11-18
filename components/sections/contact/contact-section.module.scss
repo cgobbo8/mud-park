@@ -1,13 +1,27 @@
+@import "../../../styles/variables.module.scss";
+
 .section {
-	height: 100vh;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background-color: #185b5c;
+	min-height: 80vh;
+	background-color: #211e28;
+	margin: $marge;
+	border-radius: 16px;
+	padding: $marge;
+	position: relative;
+	overflow: hidden;
 }
 
-.trees {
-	width: calc(100% + 100px);
-	margin-bottom: -10px;
-	margin-left: -50px;
+.contact-title {
+	font-size: 2rem;
+	color: $white;
+	font-weight: $title-3-weight;
+	font-style: $title-3-style;
+	text-transform: $title-3-transformation;
+	margin-bottom: $marge;
+}
+
+.contact-section-image {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	transform: translate(40%, 30%) scaleX(-1);
 }
