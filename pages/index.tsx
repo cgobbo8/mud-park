@@ -29,7 +29,7 @@ export default function Home() {
 				/>
 				<link rel='icon' href='/favicon/favicon.ico' />
 			</Head>
-			<MaintenancePanel text='Site web bientôt disponible !' pnp />
+			<MaintenancePanel text='Site web bientôt disponible !' />
 			{/* <ParallaxProvider>
 				<ScrollContextProvider>
 					<Header
