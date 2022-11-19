@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useEffect, useRef } from "react";
 import { ParallaxProvider } from "react-scroll-parallax";
 import { Header } from "../components/component/header";
+import { MaintenancePanel } from "../components/component/maintenance-panel";
 import { Navbar } from "../components/component/navbar";
 import { ContactSection } from "../components/sections/contact";
 import { CourseSection } from "../components/sections/course";
@@ -28,7 +29,8 @@ export default function Home() {
 				/>
 				<link rel='icon' href='/favicon/favicon.ico' />
 			</Head>
-			<ParallaxProvider>
+			<MaintenancePanel text='Site web bientôt disponible !' pnp />
+			{/* <ParallaxProvider>
 				<ScrollContextProvider>
 					<Header
 						sectionRefs={{
@@ -47,7 +49,7 @@ export default function Home() {
 					</main>
 					<footer></footer>
 				</ScrollContextProvider>
-			</ParallaxProvider>
+			</ParallaxProvider> */}
 		</div>
 	);
 }

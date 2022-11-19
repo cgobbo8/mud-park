@@ -1,0 +1,55 @@
+.panel {
+	height: 100vh;
+	width: 100vw;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000000;
+	background-color: #bbf4e3;
+	margin-bottom: 16px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: 4rem;
+	color: #a54c5b;
+	font-weight: 900;
+	text-align: center;
+
+	:global {
+		img {
+			width: 200px;
+		}
+
+		.text {
+			margin: 10rem 0;
+			padding: 0 5rem;
+		}
+
+		.bandes {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			height: 40px;
+
+			.haute {
+				width: 100%;
+				height: 10px;
+				background-color: #a54c5b;
+			}
+
+			.moyenne {
+				width: 100%;
+				height: 10px;
+				background-color: #e99440;
+			}
+
+			.basse {
+				width: 100%;
+				height: 10px;
+				background-color: #84be9c;
+			}
+		}
+	}
+}
