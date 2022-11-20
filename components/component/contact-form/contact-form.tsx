@@ -1,107 +1,123 @@
-import { useForm, Resolver } from "react-hook-form";
+import { FormEvent, useEffect, useState } from "react";
+import { DataResponse } from "../../../models";
 import styles from "./contact-form.module.scss";
 
+type ContactTypeEnum =
+	| "Particulier"
+	| "Entreprise"
+	| "Association"
+	| "Collectivité"
+	| "Autre";
+
 type ContactFormData = {
-	nom: string;
-	prenom: string;
-	type_contact: string;
+	type_contact: ContactTypeEnum;
 	email: string;
 	objet_message: string;
 	message: string;
 };
 
-const resolver: Resolver<ContactFormData> = async (values) => {
-	const errors: Record<string, string> = {};
-	if (!values.nom) {
-		errors.nom = "Le nom est obligatoire";
-	}
-
-	if (!values.prenom) {
-		errors.prenom = "Le prénom est obligatoire";
-	}
-
-	if (!values.type_contact) {
-		errors.type_contact = "Le type de contact est obligatoire";
-	}
-
-	if (!values.email) {
-		errors.email = "L'email est obligatoire";
-	}
-
-	if (!values.objet_message) {
-		errors.objet_message = "L'objet du message est obligatoire";
-	}
-
-	if (!values.message) {
-		errors.message = "Le message est obligatoire";
-	}
-
-	return {
-		values: errors.length ? {} : values,
-		errors,
-	};
-};
+const emailRegex =
+	/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 export const ContactForm = () => {
-	const {
-		register,
-		handleSubmit,
-		formState: { errors },
-	} = useForm<ContactFormData>({
-		resolver,
+	const [form, setForm] = useState<ContactFormData>({
+		type_contact: "Particulier",
+		email: "",
+		objet_message: "",
+		message: "",
 	});
 
-	const onSubmit = (data: ContactFormData) => {
+	const [isFormValid, setIsFormValid] = useState(false);
+
+	const [isSending, setIsSending] = useState(false);
+
+	const [errorMessage, setErrorMessage] = useState(false);
+	const [successMessage, setSuccessMessage] = useState(false);
+
+	const onSubmit = (e: FormEvent<HTMLFormElement>) => {
+		e.preventDefault();
+		setIsSending(true);
+
 		fetch("/api/contact", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
 			},
-			body: JSON.stringify(data),
+			body: JSON.stringify(form),
 		})
 			.then((response) => response.json())
-			.then((data) => {
+			.then((data: DataResponse) => {
 				console.log("Success:", data);
+				if (data.success) {
+					setForm({
+						type_contact: "Particulier",
+						email: "",
+						objet_message: "",
+						message: "",
+					});
+					setSuccessMessage(true);
+					setTimeout(() => {
+						setSuccessMessage(false);
+					}, 5000);
+					setIsFormValid(false);
+				} else {
+					console.error(data.errorMessage);
+					setErrorMessage(true);
+					setTimeout(() => {
+						setErrorMessage(false);
+					}, 5000);
+				}
 			})
 			.catch((error) => {
 				console.error("Error:", error);
+				setErrorMessage(true);
+				setTimeout(() => {
+					setErrorMessage(false);
+				}, 5000);
+			})
+			.finally(() => {
+				setIsSending(false);
 			});
 	};
 
+	const handleChange = (
+		e: React.ChangeEvent<
+			HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+		>
+	) => {
+		e.preventDefault();
+
+		if (errorMessage || successMessage) {
+			setErrorMessage(false);
+			setSuccessMessage(false);
+		}
+
+		const { name, value } = e.target;
+
+		setForm({
+			...form,
+			[name]: value,
+		});
+	};
+
+	useEffect(() => {
+		if (
+			!emailRegex.test(form.email) ||
+			form.objet_message === "" ||
+			form.message === ""
+		) {
+			console.log("invalid form");
+
+			setIsFormValid(() => false);
+		} else {
+			setIsFormValid(() => true);
+		}
+	}, [form]);
+
 	return (
-		<form onSubmit={handleSubmit(onSubmit)}>
+		<form onSubmit={onSubmit}>
 			<div className={styles["contact-form"]}>
 				<div className={styles["contact-form-content"]}>
-					<div className={styles["contact-form-content-input"]}>
-						<label
-							className={styles["contact-form-content-input-label"]}
-							htmlFor='nom'
-						>
-							Nom
-						</label>
-						<input
-							className={styles["contact-form-content-input-input"]}
-							type='text'
-							id='nom'
-							{...register("nom")}
-						/>
-						{errors.nom && <p>{errors.nom.message}</p>}
-					</div>
-					<div className={styles["contact-form-content-input"]}>
-						<label
-							className={styles["contact-form-content-input-label"]}
-							htmlFor='prenom'
-						>
-							Prénom
-						</label>
-						<input
-							className={styles["contact-form-content-input-input"]}
-							type='text'
-							id='prenom'
-							{...register("prenom")}
-						/>
-						{errors.prenom && <p>{errors.prenom.message}</p>}
-					</div>
 					<div className={styles["contact-form-content-input"]}>
 						<label
 							className={styles["contact-form-content-input-label"]}
@@ -112,7 +128,9 @@ export const ContactForm = () => {
 						<select
 							className={styles["contact-form-content-input-select"]}
 							id='type_contact'
-							{...register("type_contact")}
+							name='type_contact'
+							value={form.type_contact}
+							onChange={handleChange}
 						>
 							<option
 								className={styles["contact-form-content-input-select-option"]}
@@ -122,12 +140,29 @@ export const ContactForm = () => {
 							</option>
 							<option
 								className={styles["contact-form-content-input-select-option"]}
-								value='Professionnel'
+								value='Entreprise'
 							>
-								Professionnel
+								Entreprise
+							</option>
+							<option
+								className={styles["contact-form-content-input-select-option"]}
+								value='Association'
+							>
+								Association
+							</option>
+							<option
+								className={styles["contact-form-content-input-select-option"]}
+								value='Collectivité'
+							>
+								Collectivité
+							</option>
+							<option
+								className={styles["contact-form-content-input-select-option"]}
+								value='Autre'
+							>
+								Autre
 							</option>
 						</select>
-						{errors.type_contact && <p>{errors.type_contact.message}</p>}
 					</div>
 					<div className={styles["contact-form-content-input"]}>
 						<label
@@ -140,24 +175,26 @@ export const ContactForm = () => {
 							className={styles["contact-form-content-input-input"]}
 							type='email'
 							id='email'
-							{...register("email")}
+							name='email'
+							value={form.email}
+							onChange={handleChange}
 						/>
-						{errors.email && <p>{errors.email.message}</p>}
 					</div>
 					<div className={styles["contact-form-content-input"]}>
 						<label
 							className={styles["contact-form-content-input-label"]}
 							htmlFor='objet_message'
 						>
-							Objet du message
+							Sujet
 						</label>
 						<input
 							className={styles["contact-form-content-input-input"]}
 							type='text'
 							id='objet_message'
-							{...register("objet_message")}
+							name='objet_message'
+							value={form.objet_message}
+							onChange={handleChange}
 						/>
-						{errors.objet_message && <p>{errors.objet_message.message}</p>}
 					</div>
 					<div className={styles["contact-form-content-input"]}>
 						<label
@@ -167,17 +204,28 @@ export const ContactForm = () => {
 							Message
 						</label>
 						<textarea
-							className={styles["contact-form-content-input-input"]}
+							className={styles["contact-form-content-input-textarea"]}
 							id='message'
-							{...register("message")}
+							name='message'
+							value={form.message}
+							onChange={handleChange}
 						/>
-						{errors.message && <p>{errors.message.message}</p>}
 					</div>
 					<button
-						className={styles["contact-form-content-submit"]}
+						className={`${styles["contact-form-content-submit"]} ${
+							successMessage && styles["contact-form-content-submit-success"]
+						} ${errorMessage && styles["contact-form-content-submit-error"]}`}
 						type='submit'
+						disabled={!isFormValid}
 					>
-						Envoyer
+						{successMessage && "Message envoyé !"}
+						{errorMessage && "Une erreur s'est produite !"}
+
+						{isSending && "Envoi en cours..."}
+						{!isSending &&
+							!successMessage &&
+							!errorMessage &&
+							"Envoyer le message"}
 					</button>
 				</div>
 			</div>

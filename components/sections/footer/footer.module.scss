@@ -1,0 +1,64 @@
+@import "../../../styles/variables.module.scss";
+
+.footer {
+	background-color: $background-dark;
+	margin-top: $section-margin-top;
+	padding: $marge;
+	padding-bottom: 1rem;
+	// padding-top: 10rem;
+
+	&__item {
+		margin-bottom: $marge;
+		min-width: 400px;
+		max-width: 500px;
+		color: $text-color-light;
+	}
+
+	&__title {
+		font-size: 2rem;
+		font-weight: $title-3-weight;
+		font-style: $title-3-style;
+		text-transform: $title-3-transformation;
+		margin-bottom: 0.75rem;
+	}
+
+	&__list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		margin-bottom: 10rem;
+	}
+}
+
+.top {
+	display: flex;
+	justify-content: space-between;
+	gap: $marge;
+	border-bottom: 1px solid $text-color-grey;
+}
+
+.logo {
+	height: 80px;
+}
+
+.description {
+	margin-left: $marge;
+	color: $text-color-light;
+	width: 700px;
+	font-style: italic;
+	font-weight: 800;
+}
+
+.bottom {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: $text-color-light;
+	font-size: 0.75rem;
+	margin-top: 1rem;
+
+	&__right {
+		display: flex;
+		gap: 0.75rem;
+	}
+}

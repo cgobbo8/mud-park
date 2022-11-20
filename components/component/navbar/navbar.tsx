@@ -139,15 +139,6 @@ export const Navbar = ({ sectionRefs }: NavbarProps) => {
 				</li>
 				<li
 					className={`${styles["menu-item"]} ${
-						sectionOnScreen === "faq" ? styles.active : ""
-					}`}
-				>
-					<a href='#' onClick={goToFaqSection}>
-						FAQ
-					</a>
-				</li>
-				<li
-					className={`${styles["menu-item"]} ${
 						sectionOnScreen === "contact" ? styles.active : ""
 					}`}
 				>
@@ -155,6 +146,16 @@ export const Navbar = ({ sectionRefs }: NavbarProps) => {
 						Contact
 					</a>
 				</li>
+				<li
+					className={`${styles["menu-item"]} ${
+						sectionOnScreen === "faq" ? styles.active : ""
+					}`}
+				>
+					<a href='#' onClick={goToFaqSection}>
+						FAQ
+					</a>
+				</li>
+
 				<button className={styles["menu-cta"]}>
 					<img className={styles["menu-cta-ticket"]} src='/ticket.svg' />
 					Réserver

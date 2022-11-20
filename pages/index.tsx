@@ -7,7 +7,11 @@ import { Navbar } from "../components/component/navbar";
 import { ContactSection } from "../components/sections/contact";
 import { CourseSection } from "../components/sections/course";
 import { FaqSection } from "../components/sections/faq";
+import { Footer } from "../components/sections/footer";
 import { IntroductionSection } from "../components/sections/introduction";
+import { LieuSection } from "../components/sections/lieu";
+import { ObstaclesSection } from "../components/sections/obstacles";
+import { SponsorsSection } from "../components/sections/sponsors";
 import { TarifSection } from "../components/sections/tarif";
 import { ScrollContextProvider } from "../contexts/ScrollContext";
 import styles from "../styles/Home.module.scss";
@@ -17,6 +21,9 @@ export default function Home() {
 	const tarifSectionRef = useRef<HTMLDivElement>(null);
 	const faqSectionRef = useRef<HTMLDivElement>(null);
 	const contactSectionRef = useRef<HTMLDivElement>(null);
+	// const sponsorsSectionRef = useRef<HTMLDivElement>(null);
+	const lieuSectionRef = useRef<HTMLDivElement>(null);
+	const obstaclesSectionRef = useRef<HTMLDivElement>(null);
 
 	return (
 		<div className={styles.container}>
@@ -42,10 +49,13 @@ export default function Home() {
 						<IntroductionSection />
 						<CourseSection ref={courseSectionRef} />
 						<TarifSection ref={tarifSectionRef} />
-						<FaqSection ref={faqSectionRef} />
+						<ObstaclesSection ref={obstaclesSectionRef} />
+						<LieuSection ref={lieuSectionRef} />
+						{/* <SponsorsSection ref={sponsorsSectionRef} /> */}
 						<ContactSection ref={contactSectionRef} />
+						<FaqSection ref={faqSectionRef} />
 					</main>
-					<footer></footer>
+					<Footer />
 				</ScrollContextProvider>
 			</ParallaxProvider>
 		</div>

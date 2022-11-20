@@ -2,8 +2,6 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import nodemailer from "nodemailer";
 
 type DataReq = {
-	nom: string;
-	prenom: string;
 	type_contact: string;
 	email: string;
 	objet_message: string;
@@ -11,15 +9,15 @@ type DataReq = {
 };
 
 type DataRes = {
-	name: string;
+	success: boolean;
+	errors: Error[];
+	errorMessage: string;
 };
 
 export default function handler(
 	req: NextApiRequest,
 	res: NextApiResponse<DataRes>
 ) {
-	// log body
-	console.log(req.body);
 	let emailContent: DataReq = req.body;
 
 	const transporter = nodemailer.createTransport({
@@ -37,14 +35,13 @@ export default function handler(
 		from: "hello@example.com",
 		to: "corentin.gobbo@gmail.com",
 		subject: "Nouveau message de MUD Park",
-		text: `Nom: ${emailContent.nom}
-Prénom: ${emailContent.prenom}
+		text: `
 Type de contact: ${emailContent.type_contact}
 Email: ${emailContent.email}
 Objet du message: ${emailContent.objet_message}
 Message: ${emailContent.message}`,
 		html: `
-<h3>Nouveau message de ${emailContent.prenom} ${emailContent.nom}</h3>
+<h3>Nouveau message de ${emailContent.email} </h3>
 <ul>
 <li>Type de contact: <b>${emailContent.type_contact}</b></li>
 <li>Email: <b>${emailContent.email}</b></li>
@@ -59,14 +56,13 @@ Message: ${emailContent.message}`,
 		from: "hello@example.com",
 		to: "flocoachsportif@gmail.com",
 		subject: "Nouveau message de MUD Park",
-		text: `Nom: ${emailContent.nom}
-Prénom: ${emailContent.prenom}
+		text: `
 Type de contact: ${emailContent.type_contact}
 Email: ${emailContent.email}
 Objet du message: ${emailContent.objet_message}
 Message: ${emailContent.message}`,
 		html: `
-<h3>Nouveau message de ${emailContent.prenom} ${emailContent.nom}</h3>
+<h3>Nouveau message de ${emailContent.email}</h3>
 <ul>
 <li>Type de contact: <b>${emailContent.type_contact}</b></li>
 <li>Email: <b>${emailContent.email}</b></li>
@@ -80,15 +76,27 @@ Message: ${emailContent.message}`,
 	transporter.sendMail(mailOptionsForCorentin, function (error, info) {
 		if (error) {
 			console.log(error);
+			res.status(500).json({
+				success: false,
+				errors: [error],
+				errorMessage: "Une erreur est survenue lors de l'envoi du message",
+			});
 		} else {
 			console.log("Email sent: " + info.response);
 
 			transporter.sendMail(mailOptionsForFlorian, function (error, info) {
 				if (error) {
 					console.log(error);
+					res.status(500).json({
+						success: false,
+						errors: [error],
+						errorMessage: "Une erreur est survenue lors de l'envoi du message",
+					});
 				} else {
 					console.log("Email sent: " + info.response);
-					return res.status(200).json({ name: "John Doe" });
+					return res
+						.status(200)
+						.json({ success: true, errors: [], errorMessage: "" });
 				}
 			});
 		}

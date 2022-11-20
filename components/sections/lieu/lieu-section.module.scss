@@ -1,0 +1,67 @@
+@import "../../../styles/variables.module.scss";
+
+.section {
+	margin-top: $section-margin-top;
+	display: none;
+	padding: $section-padding;
+}
+
+.title {
+	font-size: $title-3-size;
+	color: $title-2-color;
+	font-weight: $title-2-weight;
+	font-style: $title-2-style;
+	text-transform: $title-2-transformation;
+}
+
+.faq {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 5rem;
+}
+
+.lieu-section {
+	position: relative;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+	padding: 10rem;
+	margin: $marge;
+	border-radius: 16px;
+	overflow: hidden;
+	margin-top: $section-margin-top;
+	:global {
+		.background {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: -1;
+			transform: scaleX(-1);
+
+			object-fit: cover;
+
+			filter: brightness(0.5) saturate(1.5);
+		}
+	}
+
+	&__content {
+		color: $text-color-light;
+		width: 400px;
+	}
+}
+
+.button {
+	margin-top: 1rem;
+	background-color: $accent;
+	color: $white;
+	font-weight: 900;
+	font-style: italic;
+	padding: 1rem 1.5rem;
+	font-size: 1.25rem;
+	border-radius: 8px;
+}
