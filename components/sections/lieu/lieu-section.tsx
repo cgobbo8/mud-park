@@ -13,7 +13,11 @@ const LieuSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 						héberge en son sein un magnifique parc.
 					</p>
 				</div>
-				<a href='/' className={styles.button} rel='noreferrer'>
+				<a
+					href='https://goo.gl/maps/QhDQz1xHLmBGmYzP7'
+					className={styles.button}
+					rel='noreferrer'
+				>
 					Accéder à l&apos;abbaye
 				</a>
 				<img

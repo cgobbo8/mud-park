@@ -157,7 +157,11 @@ export const Navbar = ({ sectionRefs }: NavbarProps) => {
 				</li>
 
 				<button className={styles["menu-cta"]}>
-					<img className={styles["menu-cta-ticket"]} src='/ticket.svg' />
+					<img
+						className={styles["menu-cta-ticket"]}
+						src='/ticket.svg'
+						alt='ticket'
+					/>
 					Réserver
 				</button>
 			</ul>
