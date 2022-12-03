@@ -9,6 +9,10 @@ body {
 		Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+html {
+	font-size: clamp(12px, 1.2vw, 18px);
+}
+
 body {
 	overflow-x: hidden;
 }

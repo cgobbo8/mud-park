@@ -4,6 +4,11 @@
 	margin-top: $section-margin-top;
 	display: none;
 	padding: $section-padding;
+
+	@media screen and (max-width: 700px) {
+		margin-top: $section-margin-top;
+		padding: $marge-small;
+	}
 }
 
 .title {

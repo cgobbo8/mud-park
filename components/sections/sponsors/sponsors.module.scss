@@ -3,6 +3,10 @@
 .section {
 	margin-top: $section-margin-top;
 	padding: $section-padding;
+
+	@media screen and (max-width: 700px) {
+		padding: $section-padding-small;
+	}
 	display: flex;
 	width: 100%;
 	align-items: center;

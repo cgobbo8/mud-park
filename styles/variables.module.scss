@@ -33,6 +33,7 @@ $title-1-style: italic;
 $title-1-color: $text-color-dark;
 
 $title-2-size: 10rem;
+$title-2-size-small: 7rem;
 $title-2-transformation: uppercase;
 $title-2-weight: 900;
 $title-2-style: italic;
@@ -48,7 +49,10 @@ $text-huge-size: 3rem;
 $text-paragraph: 1rem;
 
 $marge: 4rem;
+$marge-small: 2rem;
+
 $navbar-height: 80px;
 
 $section-margin-top: 20rem;
 $section-padding: 0 $marge;
+$section-padding-small: 0 $marge-small;

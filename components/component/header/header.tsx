@@ -32,7 +32,7 @@ export const Header = ({ sectionRefs }: HeaderProps) => {
 				<img
 					ref={plan3}
 					className={styles["third-plan"]}
-					src='/arriere-plan.png'
+					src='/images/hero/arriere-plan.png'
 					alt='plans'
 				/>
 				<div ref={title} className={styles["title-plan"]}>
@@ -41,13 +41,13 @@ export const Header = ({ sectionRefs }: HeaderProps) => {
 				<img
 					ref={plan2}
 					className={styles["second-plan"]}
-					src='/second-plan.png'
+					src='/images/hero/deuxieme-plan.png'
 					alt='plans'
 				/>
 				<img
 					ref={plan1}
 					className={styles["first-plan"]}
-					src='/premier-plan.png'
+					src='/images/hero/premier-plan.png'
 					alt='plans'
 				/>
 				<div ref={background} className={styles.background}></div>

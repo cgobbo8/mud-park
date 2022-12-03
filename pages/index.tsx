@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import { ParallaxProvider } from "react-scroll-parallax";
 import { Header } from "../components/component/header";
 import { Navbar } from "../components/component/navbar";
+import { ReservationModal } from "../components/component/reservation-modal";
 import { ContactSection } from "../components/sections/contact";
 import { CourseSection } from "../components/sections/course";
 import { FaqSection } from "../components/sections/faq";
@@ -13,6 +14,8 @@ import { LieuSection } from "../components/sections/lieu";
 import { ObstaclesSection } from "../components/sections/obstacles";
 import { SponsorsSection } from "../components/sections/sponsors";
 import { TarifSection } from "../components/sections/tarif";
+import { ModalContextProvider } from "../contexts/ModalContext";
+import { Providers } from "../contexts/Providers";
 import { ScrollContextProvider } from "../contexts/ScrollContext";
 import styles from "../styles/Home.module.scss";
 
@@ -35,29 +38,28 @@ export default function Home() {
 				/>
 				<link rel='icon' href='/favicon/favicon.ico' />
 			</Head>
-			<ParallaxProvider>
-				<ScrollContextProvider>
-					<Header
-						sectionRefs={{
-							courseSectionRef,
-							tarifSectionRef,
-							faqSectionRef,
-							contactSectionRef,
-						}}
-					/>
-					<main>
-						<IntroductionSection />
-						<CourseSection ref={courseSectionRef} />
-						<TarifSection ref={tarifSectionRef} />
-						<ObstaclesSection ref={obstaclesSectionRef} />
-						<LieuSection ref={lieuSectionRef} />
-						{/* <SponsorsSection ref={sponsorsSectionRef} /> */}
-						<ContactSection ref={contactSectionRef} />
-						<FaqSection ref={faqSectionRef} />
-					</main>
-					<Footer />
-				</ScrollContextProvider>
-			</ParallaxProvider>
+			<Providers>
+				<Header
+					sectionRefs={{
+						courseSectionRef,
+						tarifSectionRef,
+						faqSectionRef,
+						contactSectionRef,
+					}}
+				/>
+				<main>
+					<IntroductionSection />
+					<CourseSection ref={courseSectionRef} />
+					<TarifSection ref={tarifSectionRef} />
+					<ObstaclesSection ref={obstaclesSectionRef} />
+					<LieuSection ref={lieuSectionRef} />
+					{/* <SponsorsSection ref={sponsorsSectionRef} /> */}
+					<ContactSection ref={contactSectionRef} />
+					<FaqSection ref={faqSectionRef} />
+				</main>
+				<Footer />
+				<ReservationModal />
+			</Providers>
 		</div>
 	);
 }

@@ -31,7 +31,7 @@ export const IntroductionSection = () => {
 				<img
 					ref={joggeuse}
 					className={styles.joggeuse}
-					src='/coureuse.png'
+					src='/coureuse.svg'
 					alt='coureuse'
 				/>
 			</div>

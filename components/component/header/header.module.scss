@@ -66,6 +66,14 @@ $header-height: 100vh;
 			-webkit-text-fill-color: transparent;
 			background-clip: text;
 			text-fill-color: transparent;
+
+			@media screen and (max-width: 768px) {
+				font-size: 3rem;
+			}
+
+			@media screen and (max-width: 380px) {
+				font-size: 2rem;
+			}
 		}
 	}
 }

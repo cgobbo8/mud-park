@@ -50,7 +50,7 @@ const ContactSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 				<ContactForm />
 				<img
 					className={styles["contact-section-image"]}
-					src='/images/mail-hero.svg'
+					src='/images/mail.png'
 					alt='hero with letter'
 				/>
 			</div>

@@ -48,6 +48,10 @@
 		&:hover {
 			color: $text-color-dark;
 		}
+
+		@media screen and (max-width: 600px) {
+			display: none;
+		}
 	}
 
 	.active {
@@ -73,6 +77,11 @@
 
 		&:hover {
 			transform: scale(0.98);
+		}
+
+		@media screen and (max-width: 600px) {
+			font-size: 1.5rem;
+			padding: 0.5rem 1.5rem;
 		}
 	}
 }

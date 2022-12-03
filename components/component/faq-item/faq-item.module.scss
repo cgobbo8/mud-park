@@ -46,6 +46,10 @@
 			padding-right: 20rem;
 			padding-bottom: 2rem;
 			padding-left: 2rem;
+
+			@media screen and (max-width: 600px) {
+				padding-right: 4rem;
+			}
 		}
 	}
 }
