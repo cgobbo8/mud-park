@@ -29,7 +29,20 @@ $header-height: 100vh;
 .first-plan {
 	// background-color: red;
 	position: relative;
-	height: 100%;
+	height: 100vh;
+	width: 100vw;
+
+	:global {
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100vw;
+			height: 100vh;
+			object-fit: cover;
+			pointer-events: none;
+		}
+	}
 }
 
 // .second-plan {

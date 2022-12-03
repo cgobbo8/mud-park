@@ -5,6 +5,10 @@
 	margin-top: $section-margin-top;
 	padding: $marge;
 	padding-bottom: 1rem;
+
+	@media screen and (max-width: 700px) {
+		padding: $marge-small;
+	}
 	// padding-top: 10rem;
 
 	&__item {
@@ -12,6 +16,11 @@
 		min-width: 400px;
 		max-width: 500px;
 		color: $text-color-light;
+
+		@media screen and (max-width: 930px) {
+			min-width: auto;
+			margin-bottom: 2rem;
+		}
 	}
 
 	&__title {
@@ -35,6 +44,12 @@
 	justify-content: space-between;
 	gap: $marge;
 	border-bottom: 1px solid $text-color-grey;
+
+	@media screen and (max-width: 700px) {
+		flex-direction: column;
+		gap: 2rem;
+		padding-bottom: 0;
+	}
 }
 
 .logo {
@@ -42,11 +57,17 @@
 }
 
 .description {
+	display: none;
 	margin-left: $marge;
 	color: $text-color-light;
 	width: 700px;
 	font-style: italic;
 	font-weight: 800;
+
+	@media screen and (max-width: 930px) {
+		width: 100%;
+		background-color: red;
+	}
 }
 
 .bottom {
