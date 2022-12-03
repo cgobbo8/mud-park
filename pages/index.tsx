@@ -36,6 +36,9 @@ export default function Home() {
 					name='description'
 					content="MUD Park, la course d'obstacle qui créé des souvenirs."
 				/>
+
+				<meta http-equiv='X-UA-Compatible' content='IE=edge' />
+				<meta name='viewport' content='width=device-width, initial-scale=1.0' />
 				<link rel='icon' href='/favicon/favicon.ico' />
 			</Head>
 			<Providers>
