@@ -19,7 +19,9 @@ export const IntroductionSection = () => {
 		<section className={styles.section}>
 			<div className={styles.intro}>
 				<p ref={text1} className={styles.text}>
-					Mud park est une course d’obstacle dans un cadre idylique.
+					Mud park est une course d’obstacle qui se déroulera le{" "}
+					<span className='accent'>27 Mai 2023</span> dans le parc de{" "}
+					<span className='accent'>l&apos;Abbaye École de Sorèze</span>.
 					<br />
 					<br />
 					Pour une première édition, MUD Park a décidé de voir les choses en
@@ -50,12 +52,13 @@ export const IntroductionSection = () => {
 					</div>
 				</div>
 				<p className={styles["description-text"]}>
-					Tous les obstacles ont été réfléchi pour qu&apos;il soient adaptés au
-					grand public, personnes sédentaires commes confirmées.
+					Tous les obstacles ont été réfléchi pour qu&apos;il soient adaptés au{" "}
+					<span className='accent'>grand public</span>, personnes sédentaires
+					commes confirmées.
 					<br />
 					<br />
-					MUD Park est un parcours et non une course, alors prenez votre temps
-					et profitez de ce moment.
+					MUD Park est un <span className='accent'>parcours</span> et non une
+					course, alors prenez votre temps et profitez de ce moment.
 				</p>
 			</div>
 		</section>

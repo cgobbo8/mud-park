@@ -1,62 +1,93 @@
 export const faqContent = [
 	{
-		label: "Qu'est-ce que MUD Park ?",
+		label: "Quelle est la durée de la course",
 		content:
-			"MUD Park est une course d'obstacle qui se déroule dans un parcours de 5km. Vous y trouverez des obstacles de tous types, des murs, des tyroliennes, des tunnels, des piscines, des barbelés, des escaliers, des ponts, des toboggans, des trampolines, des échelles, des cordes, des filets, des murs de glace, des murs de feu, des murs de boue, des murs de sable, des murs de neige, des murs de glace, des murs de feu, des murs de boue, des murs de sable, des murs de neige, des murs de glace, des murs de feu, des murs de boue, des murs de sable, des murs de neige, des murs de glace, des murs de feu, des murs de boue, des murs de sable, des murs de neige, des murs de glace, des murs de feu, des murs de boue, des murs de sable, des murs de neige, des murs de glace, des murs de feu, des murs de boue, des murs de sable, des murs de neige, des murs de glace, des murs de feu, des murs de boue, des murs de sable, des murs de neige, des murs de glace, des murs de feu, des murs de boue, des murs de sable, des murs de neige, des murs de glace, des murs de feu, des murs de boue, des murs de sable, des murs de neige, des murs de glace, des murs de feu, des murs de boue, des murs de sable, des murs de neige, des murs de glace, des murs de feu, des murs de boue, des murs de sable, des murs de neige, des murs de glace, des murs de feu, des murs de boue, des murs de sable, des murs de neige, des murs de glace, des murs de feu,",
-	},
-	{
-		label: "Quelle est la durée de la course ?",
-		content:
-			"La course dure environ 1h30. Vous pouvez vous inscrire pour faire la course en solo ou en équipe de 2 à 5 personnes.",
+			"Suivant le niveau de chacun il faut compter de 1h à 3h de temps de course.",
 	},
 	{
 		label: "Quelle est la distance de la course ?",
-		content:
-			"La course fait 5km. Vous pouvez vous inscrire pour faire la course en solo ou en équipe de 2 à 5 personnes.",
+		content: "2 types de courses, une de 4km et l’autre de 8km sans dénivelé !",
 	},
 	{
 		label: "Quelle est l'âge minimum pour participer ?",
 		content:
-			"Vous devez avoir 16 ans pour participer à la course. Vous pouvez vous inscrire pour faire la course en solo ou en équipe de 2 à 5 personnes.",
-	},
-	{
-		label: "Quelle est l'âge maximum pour participer ?",
-		content:
-			"Vous devez avoir 99 ans pour participer à la course. Vous pouvez vous inscrire pour faire la course en solo ou en équipe de 2 à 5 personnes.",
+			"Que ce soit la course de 4 ou de 8km l’âge minimum est de 14 ans et pour les plus jeune un parcours sera mis à disposition à volonté en attendant les parents",
 	},
 	{
 		label: "Quelle est la date de la course ?",
-		content:
-			"La course se déroule le 1er janvier 2022. Vous pouvez vous inscrire pour faire la course en solo ou en équipe de 2 à 5 personnes.",
+		content: "La course de déroulera le 27 mai 2023 à partir de 9h",
 	},
 	{
 		label: "Quelle est l'heure de la course ?",
 		content:
-			"La course se déroule à 10h00. Vous pouvez vous inscrire pour faire la course en solo ou en équipe de 2 à 5 personnes.",
+			"Des départs sont prévus toutes les 30mins, à partir de 9H jusqu’à 17H30. Pensez à bien choisir le créneau voulu au moment de l’achat des billets.",
 	},
 	{
 		label: "Où se déroule la course ?",
 		content:
-			"La course se déroule à Paris. Vous pouvez vous inscrire pour faire la course en solo ou en équipe de 2 à 5 personnes.",
+			"La course se déroulera dans le parc de l’Abbaye École de Sorèze, qui est un lieu historique de France. Vous aurez de plus amples détails par mail après inscription à cet événement",
 	},
 	{
 		label: "Combien coûte l'inscription ?",
 		content:
-			"L'inscription coûte 10€. Vous pouvez vous inscrire pour faire la course en solo ou en équipe de 2 à 5 personnes.",
+			"Sur les 2 premiers mois, les tarifs varient de 35 euros à 29 euros pour un groupe de 7 à 10 personnes.",
 	},
 	{
 		label: "Combien coûte l'inscription pour les enfants ?",
 		content:
-			"L'inscription coûte 5€. Vous pouvez vous inscrire pour faire la course en solo ou en équipe de 2 à 5 personnes.",
+			"Si les parents sont inscrits sur le parcours d’obstacles, ce sera donc gratuit pour les enfants",
 	},
 	{
 		label: "Peut on s'inscrire sur place ?",
-		content:
-			"Non, vous devez vous inscrire en ligne. Vous pouvez vous inscrire pour faire la course en solo ou en équipe de 2 à 5 personnes.",
+		content: "Si il reste des places, bien sûr oui",
 	},
 	{
 		label: "Peut-on se faire rembourser ?",
 		content:
-			"Non, vous ne pouvez pas vous faire rembourser. Vous pouvez vous inscrire pour faire la course en solo ou en équipe de 2 à 5 personnes.",
+			"Le remboursement sera possible avec un certificat médical viable.",
+	},
+	// {
+	// 	label: "Peut-on participer à un autre créneau horaire si on rate le notre ?",
+	// 	content:
+	// 		"Oui, il suffit de nous contacter par mail pour nous le signaler et nous vous proposerons un autre créneau.",
+	// },
+	// {
+	// 	label: "Les places sont-elles nominatives ?",
+	// 	content:
+	// 		"Oui, chaque billet est nominatif et vous devez donc vous présenter avec votre billet.",
+	// },
+	// {
+	// 	label: "Quels affaires je dois prendre pour le jour de la course ?",
+	// 	content:
+	// 		"Des chaussures de sport, ..."
+	// },
+	// {
+	// 	label: "Est-ce qu’on pourra manger sur place ?",
+	// 	content:
+	// 		"Oui, nous proposerons des boissons et des sandwichs sur place."
+	// },
+	{
+		label: "Est-ce que les enfants sont acceptés ?",
+		content:
+			"Oui, les enfants seront gardés et possèderont un parcours rien que pour eux !",
+	},
+	{
+		label: "Où est-ce qu’on pourrait se garer ? ",
+		content:
+			"Beaucoup de places sont disponibles aux abords du Parc de l’Abbaye Ecole",
+	},
+	{
+		label: "Il y a t-il des transports en commun pour venir ?",
+		content:
+			"Oui un arrêt de bus se trouve juste à coté du parc de l’Abbaye Ecole. Il faudra emprunter la ligne de bus 761 qui va de Revel à Castres.",
+	},
+	{
+		label: "Il y a t-il des prix à gagner ?",
+		content:
+			"Non, MUD Park ne souhaite pas être une course, il n’y aura donc pas de vainqueurs. Cependant cela ne vous empêche pas de vous challenger avec vos amis si vous le souhaitez !",
+	},
+	{
+		label: "A partir de quand on pourra s’inscrire ?",
+		content: "L’inscription est déjà ouverte ! Alors n’attendez pas !",
 	},
 ];

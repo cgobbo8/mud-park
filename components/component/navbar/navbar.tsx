@@ -113,12 +113,15 @@ export const Navbar = ({ sectionRefs }: NavbarProps) => {
 
 	return (
 		<nav className={`${styles.navbar} ${isOnTop ? "" : styles.isNotOnTop}`}>
-			<img
-				onClick={scrollToTop}
-				className={styles.logo}
-				src='/logo.svg'
-				alt='logo'
-			/>
+			<div className={styles.left}>
+				<img
+					onClick={scrollToTop}
+					className={styles.logo}
+					src='/logo.svg'
+					alt='logo'
+				/>
+				<div className={styles.date}>Course le 27 Mai 2023</div>
+			</div>
 			<ul className={styles.menu}>
 				<li
 					className={`${styles["menu-item"]} ${

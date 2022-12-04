@@ -36,6 +36,15 @@ button {
 	box-shadow: none;
 }
 
+.accent {
+	color: $accent !important;
+	background-clip: initial !important;
+	-webkit-background-clip: unset !important;
+	-webkit-text-fill-color: $accent !important;
+	background-clip: unset;
+	text-fill-color: $accent;
+}
+
 // section {
 // 	margin-top: 20rem;
 // 	padding: 0 $marge;

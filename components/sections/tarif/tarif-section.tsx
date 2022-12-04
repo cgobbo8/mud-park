@@ -36,9 +36,15 @@ const TarifSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 			<div className={styles["section-background"]}></div>
 			<h2 className={styles.title}>Tarifs</h2>
 			<h3 className={styles.baseline}>
-				{nbDaysBeforeDDay < 1
-					? "C'est bientôt le jour J !"
-					: `Il reste ${Math.floor(nbDaysBeforeDDay)} jours avant la course !`}
+				{nbDaysBeforeDDay < 1 ? (
+					<>C&apos;est bientôt le jour J !</>
+				) : (
+					<>
+						Il reste{" "}
+						<span className='accent'>{Math.floor(nbDaysBeforeDDay)} jours</span>{" "}
+						avant la course !
+					</>
+				)}
 			</h3>
 
 			<div className={styles.tarifs}>

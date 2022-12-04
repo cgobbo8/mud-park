@@ -1,35 +1,40 @@
-import { useEffect, useState } from "react";
+import { RefObject, useEffect, useRef, useState } from "react";
 import styles from "./page-loader.module.scss";
 
 export const PageLoader = () => {
 	const [loading, setLoading] = useState(true);
 
+	const logoRef: RefObject<HTMLImageElement> = useRef(null);
+	const pageRef: RefObject<HTMLDivElement> = useRef(null);
+
 	useEffect(() => {
 		setTimeout(() => {
-			setLoading(false);
-		}, 2000);
+			if (logoRef.current) {
+				// add class isLoaded to logoRef
+				logoRef.current.classList.add(styles.isLoaded);
+			}
+			setTimeout(() => {
+				if (logoRef.current) {
+					// remove class isLoaded from logoRef
+					logoRef.current.classList.remove(styles.isLoaded);
+				}
+
+				if (pageRef.current) {
+					// add class isLoaded to pageRef
+					pageRef.current.classList.add(styles.isLoaded);
+				}
+			}, 2000);
+		}, 300);
 	}, []);
 
 	return (
-		<div className={styles["page-loader"]}>
-			<div
-				className={`${styles["page-loader--content--container"]} ${styles.container1}`}
-			>
-				<div
-					className={`${styles["page-loader--content--text"]} ${styles.text1}`}
-				>
-					MUD PARK
-				</div>
-			</div>
-			<div
-				className={`${styles["page-loader--content--container"]} ${styles.container2}`}
-			>
-				<div
-					className={`${styles["page-loader--content--text"]} ${styles.text2}`}
-				>
-					MUD PARK
-				</div>
-			</div>
+		<div className={styles["page-loader"]} ref={pageRef}>
+			<img
+				src='/logo-white.svg'
+				alt='logo'
+				className={styles["page-loader--logo"]}
+				ref={logoRef}
+			/>
 		</div>
 	);
 };

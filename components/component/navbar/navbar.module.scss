@@ -31,6 +31,26 @@
 	cursor: pointer;
 }
 
+.left {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+}
+
+.date {
+	padding: 0.5rem 1rem;
+	background-color: #ff7c5b1e;
+	border-radius: 8px;
+	color: $accent;
+	font-style: italic;
+	font-size: 1rem;
+	font-weight: 900;
+
+	@media screen and (max-width: 490px) {
+		display: none;
+	}
+}
+
 .menu {
 	display: flex;
 	justify-content: space-between;
@@ -49,7 +69,7 @@
 			color: $text-color-dark;
 		}
 
-		@media screen and (max-width: 600px) {
+		@media screen and (max-width: 680px) {
 			display: none;
 		}
 	}

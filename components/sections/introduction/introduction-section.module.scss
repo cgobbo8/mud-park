@@ -28,6 +28,7 @@
 	margin-left: 15vw;
 	padding-bottom: 3rem;
 	color: $white;
+	position: static;
 
 	background: linear-gradient(180deg, #fff 0%, #083749 80%);
 	-webkit-background-clip: text;
@@ -81,6 +82,10 @@
 
 	@media screen and (max-width: 600px) {
 		display: none;
+	}
+
+	@media screen and (max-width: 380px) {
+		height: 300px;
 	}
 }
 
