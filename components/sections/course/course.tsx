@@ -250,11 +250,13 @@ const CourseSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 							ÉGALEMENT POUR LES PETITS !
 						</h3>
 						<p className={styles["course-content-text-bloc-text"]}>
-							Vous ne savez pas comment faire garder vos enfants pendant la
-							course ? On a pensé à tout ! Un circuit d&apos;environ 500m est
-							prévu et adapté pour tous les enfants. Structures gonflables,
-							légos géants, ils s&apos;amuseront comme les grands ! Et
-							évidemment, la course sera offerte pour eux !
+							Vous ne savez pas comment faire garder vos enfants de - de 14ans
+							pendant la course ? On a pensé à tout ! Un circuit d&apos;environ
+							500m est prévu et adapté pour tous les enfants.
+							<br />
+							<br />
+							Structures gonflables, légos géants, ils s&apos;amuseront comme
+							les grands ! Et évidemment, la course sera offerte pour eux !
 						</p>
 					</div>
 					<div ref={kmRef} className={styles["course-content-text-bloc"]}>

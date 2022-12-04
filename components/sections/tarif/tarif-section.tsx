@@ -128,7 +128,7 @@ const TarifSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 				billetterie
 			</p>
 			<p className={styles.clauses}>
-				*Gratuit pour les enfants de moins de 12 ans, veuillez nous contacter si
+				*Gratuit pour les enfants de moins de 14 ans, veuillez nous contacter si
 				vous en avez !
 			</p>
 		</section>
