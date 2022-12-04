@@ -7,10 +7,8 @@ export type DataResponse = {
 
 export enum ObstacleFamily {
 	Physique = "Physique",
-	Mental = "Mental",
 	Agilité = "Agilité",
 	Fun = "Fun",
-	Boueux = "Boueux",
 }
 
 export interface ObstacleType {

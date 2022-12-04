@@ -9,7 +9,7 @@ const LieuSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 				<div className={styles["lieu-section__content"]}>
 					<p>
 						Nous avons la chance de pouvoir effectuer la course dans
-						l&apos;enceinte de l&apos;abbaye école de Sorèze. Ce lieu historique
+						l&apos;enceinte de l&apos;Abbaye École de Sorèze. Ce lieu historique
 						héberge en son sein un magnifique parc.
 					</p>
 				</div>

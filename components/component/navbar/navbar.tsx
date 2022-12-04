@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useContext, useEffect, useState } from "react";
 import ScrollContext, {
 	ScrollContextType,
@@ -156,14 +157,18 @@ export const Navbar = ({ sectionRefs }: NavbarProps) => {
 					</a>
 				</li>
 
-				<button className={styles["menu-cta"]}>
+				<Link
+					href='https://www.vostickets.fr/Billet?ID=ABBAYE_ECOLE_SOREZE'
+					className={styles["menu-cta"]}
+					target='_blank'
+				>
 					<img
 						className={styles["menu-cta-ticket"]}
 						src='/ticket.svg'
 						alt='ticket'
 					/>
 					Réserver
-				</button>
+				</Link>
 			</ul>
 		</nav>
 	);

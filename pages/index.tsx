@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import { ParallaxProvider } from "react-scroll-parallax";
 import { Header } from "../components/component/header";
 import { Navbar } from "../components/component/navbar";
+import { PageLoader } from "../components/component/page-loader";
 import { ReservationModal } from "../components/component/reservation-modal";
 import { ContactSection } from "../components/sections/contact";
 import { CourseSection } from "../components/sections/course";
@@ -31,10 +32,52 @@ export default function Home() {
 	return (
 		<div className={styles.container}>
 			<Head>
+				{/* Create perfect SEO Head */}
+				<title>MUD Park 2023</title>
+				<meta
+					name='description'
+					content='Mud park est une course d’obstacle dans un cadre idylique. Pour une
+					première édition, MUD Park a décidé de voir les choses en grand,
+					avec pas moins de 22 obstacles et de nombreux happenings. Et tout ça
+					dans un park historique de 6 hectares !'
+				/>
+				<link rel='icon' href='/favicon.ico' />
+
+				<meta property='og:title' content='MUD Park 2023' />
+				<meta
+					property='og:description'
+					content='Mud park est une course d’obstacle dans un cadre idylique. Pour une
+					première édition, MUD Park a décidé de voir les choses en grand,
+					avec pas moins de 22 obstacles et de nombreux happenings. Et tout ça
+					dans un park historique de 6 hectares !'
+				/>
+				<meta property='og:image' content='/socio.png' />
+				<meta property='og:url' content='https://mud-park.fr' />
+				<meta name='twitter:card' content='summary_large_image' />
+
+				<meta name='twitter:title' content='MUD Park 2023' />
+				<meta
+					name='twitter:description'
+					content='Mud park est une course d’obstacle dans un cadre idylique. Pour une
+					première édition, MUD Park a décidé de voir les choses en grand,
+					avec pas moins de 22 obstacles et de nombreux happenings. Et tout ça
+					dans un park historique de 6 hectares !'
+				/>
+
+				<meta name='twitter:image' content='/socio.png' />
+
+				<meta name='twitter:site' content='@mudpark' />
+				<meta name='twitter:creator' content='@mudpark' />
+
+				<meta name='viewport' content='width=device-width, initial-scale=1' />
+
 				<title>MUD Park</title>
 				<meta
 					name='description'
-					content="MUD Park, la course d'obstacle qui créé des souvenirs."
+					content='Mud park est une course d’obstacle dans un cadre idylique. Pour une
+					première édition, MUD Park a décidé de voir les choses en grand,
+					avec pas moins de 22 obstacles et de nombreux happenings. Et tout ça
+					dans un park historique de 6 hectares !'
 				/>
 
 				<meta http-equiv='X-UA-Compatible' content='IE=edge' />
@@ -62,6 +105,7 @@ export default function Home() {
 				</main>
 				<Footer />
 				<ReservationModal />
+				{/* <PageLoader /> */}
 			</Providers>
 		</div>
 	);

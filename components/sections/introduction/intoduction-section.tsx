@@ -23,7 +23,10 @@ export const IntroductionSection = () => {
 					<br />
 					<br />
 					Pour une première édition, MUD Park a décidé de voir les choses en
-					grand, avec pas moins de 18 obstacles et de nombreux happenings.
+					grand, avec pas moins de 22 obstacles et de nombreux happenings.
+					<br />
+					<br />
+					Et tout ça dans un park historique de 6 hectares !
 				</p>
 				<div className={styles.year}>
 					<p>2023</p>
@@ -38,19 +41,21 @@ export const IntroductionSection = () => {
 			<div className={styles.description}>
 				<div className={styles["description-numbers"]}>
 					<div className={styles["description-number"]}>
-						<p className={styles["description-number-text"]}>18</p>
+						<p className={styles["description-number-text"]}>22</p>
 						<p className={styles["description-number-label"]}>Obstacles</p>
 					</div>
 					<div className={styles["description-number"]}>
-						<p className={styles["description-number-text"]}>5</p>
+						<p className={styles["description-number-text"]}>4/8</p>
 						<p className={styles["description-number-label"]}>Km</p>
 					</div>
 				</div>
 				<p className={styles["description-text"]}>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla neque
-					tempore fuga doloremque ut perspiciatis, nemo itaque possimus nobis
-					exercitationem accusamus ratione consectetur. Similique vel accusamus
-					mollitia perspiciatis quasi voluptatum!
+					Tous les obstacles ont été réfléchi pour qu&apos;il soient adaptés au
+					grand public, personnes sédentaires commes confirmées.
+					<br />
+					<br />
+					MUD Park est un parcours et non une course, alors prenez votre temps
+					et profitez de ce moment.
 				</p>
 			</div>
 		</section>

@@ -4,7 +4,7 @@
 }
 
 .intro {
-	background-color: #16585c;
+	background-color: #083749;
 	// background: linear-gradient(180deg, #16585c 0%, #073247 100%);
 	padding-top: 0vh;
 	padding-bottom: 50vh;
@@ -24,12 +24,12 @@
 .text {
 	font-weight: 900;
 	font-size: $text-huge-size;
-	max-width: 45vw;
+	max-width: 46vw;
 	margin-left: 15vw;
 	padding-bottom: 3rem;
 	color: $white;
 
-	background: linear-gradient(180deg, #fff 0%, #16585c 80%);
+	background: linear-gradient(180deg, #fff 0%, #083749 80%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	background-clip: text;
@@ -86,7 +86,7 @@
 
 .description {
 	margin-top: 7rem;
-	width: 45vw;
+	width: 52vw;
 	right: 0;
 	margin-left: auto;
 	height: 40vh;
@@ -95,7 +95,7 @@
 	align-items: flex-start;
 
 	@media screen and (max-width: 1000px) {
-		margin-top: 15rem;
+		margin-top: 24rem;
 		width: 100vw;
 		flex-direction: column;
 	}
@@ -107,10 +107,10 @@
 	&-numbers {
 		display: flex;
 		flex-direction: column;
-		margin-right: 10rem;
-		margin-left: 5rem;
 
 		@media screen and (max-width: 1000px) {
+			margin-left: 5rem;
+			margin-right: 10rem;
 			flex-direction: row;
 			align-self: flex-end;
 		}
@@ -152,6 +152,6 @@
 		margin-right: 10rem;
 		margin-left: 5rem;
 		font-size: 1.5rem;
-		color: $text-color-light;
+		color: $text-color-grey;
 	}
 }

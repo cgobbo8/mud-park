@@ -19,7 +19,7 @@ export const obstacles: ObstacleType[] = [
 		id: 3,
 		name: "Glissade boueuse",
 		description: "Un grand saut",
-		family: [ObstacleFamily.Boueux, ObstacleFamily.Fun],
+		family: [ObstacleFamily.Fun],
 		image: "/images/obstacles/glissade-boueuse.svg",
 	},
 	{
@@ -68,7 +68,7 @@ export const obstacles: ObstacleType[] = [
 		id: 10,
 		name: "Ramper dans la boue",
 		description: "Un grand saut",
-		family: [ObstacleFamily.Boueux],
+		family: [ObstacleFamily.Fun],
 		image: "/images/obstacles/ramper-dans-la-boue.svg",
 	},
 	{
@@ -82,7 +82,7 @@ export const obstacles: ObstacleType[] = [
 		id: 12,
 		name: "The wall",
 		description: "Un grand saut",
-		family: [ObstacleFamily.Mental],
+		family: [ObstacleFamily.Physique],
 		image: "/images/obstacles/the-wall.svg",
 	},
 	{

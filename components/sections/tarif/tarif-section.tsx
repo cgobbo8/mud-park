@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { useContext, useEffect, useState } from "react";
 import ScrollContext, {
 	ScrollContextType,
@@ -39,9 +40,14 @@ const TarifSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 					? "C'est bientôt le jour J !"
 					: `Il reste ${Math.floor(nbDaysBeforeDDay)} jours avant la course !`}
 			</h3>
+
 			<div className={styles.tarifs}>
-				<div className={styles.tarif}>
-					<h3 className={styles.tarifTitle}>Course en solo</h3>
+				<Link
+					href='https://www.vostickets.fr/Billet?ID=ABBAYE_ECOLE_SOREZE'
+					target='_blank'
+					className={styles.tarif}
+				>
+					<h3 className={styles.tarifTitle}>Petit commité</h3>
 					<div className={styles.tarifPrice}>
 						<div className='price'>35€</div>
 						<div className='baseline'>Par personne</div>
@@ -50,8 +56,9 @@ const TarifSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 						Je prends mon billet
 					</button>
 					<p className={styles.tarifDescription}>
-						Qui a besoin de compagnie pour courir ? Personne et surtout pas vous
-						!
+						Vous êtes entre 1 et 3 personnes ? <br />
+						Qui a besoin d&apos;être 30 pour courir ? Personne et surtout pas
+						vous !
 					</p>
 
 					<img
@@ -59,18 +66,22 @@ const TarifSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 						src='/images/prices/duo.png'
 						alt='runner'
 					/>
-				</div>
-				<div className={styles.tarif}>
+				</Link>
+				<Link
+					href='https://www.vostickets.fr/Billet?ID=ABBAYE_ECOLE_SOREZE'
+					target='_blank'
+					className={styles.tarif}
+				>
 					<h3 className={styles.tarifTitle}>Petite équipe</h3>
 					<div className={styles.tarifPrice}>
-						<div className='price'>30€</div>
+						<div className='price'>32€</div>
 						<div className='baseline'>Par personne</div>
 					</div>
 					<button className={styles.reservationButton}>
 						Je prends mon billet
 					</button>
 					<p className={styles.tarifDescription}>
-						Vous êtes 2 à 4 personnes et vous souhaitez courir ensemble ?
+						Vous êtes 4 à 6 personnes et vous souhaitez courir ensemble ?
 						C&apos;est possible ! Bénificiez d&apos;un tarif préférentiel.
 					</p>
 
@@ -79,18 +90,22 @@ const TarifSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 						src='/images/prices/team.png'
 						alt='runner'
 					/>
-				</div>
-				<div className={`${styles.tarif} ${styles.prime}`}>
+				</Link>
+				<Link
+					href='https://www.vostickets.fr/Billet?ID=ABBAYE_ECOLE_SOREZE'
+					target='_blank'
+					className={`${styles.tarif} ${styles.prime}`}
+				>
 					<h3 className={styles.tarifTitle}>Grosse team</h3>
 					<div className={styles.tarifPrice}>
-						<div className='price'>25€</div>
+						<div className='price'>29€</div>
 						<div className='baseline'>Par personne</div>
 					</div>
 					<button className={styles.reservationButton}>
 						Je prends mon billet
 					</button>
 					<p className={styles.tarifDescription}>
-						Vous avez réussi à réunir une équipe de 5 à 10 personnes ? Vous
+						Vous avez réussi à réunir une équipe de 7 à 10 personnes ? Vous
 						bénéficiez d&apos;un tarif encore plus avantageux !
 					</p>
 
@@ -99,8 +114,17 @@ const TarifSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 						src='/images/prices/grosse_team.png'
 						alt='runner'
 					/>
-				</div>
+				</Link>
 			</div>
+			<p className={styles.clauses}>*Le tarif inclut toutes les surprises !</p>
+			<p className={styles.clauses}>
+				*Départ toutes les 30 minutes, choisissez votre créneau horaire sur la
+				billetterie
+			</p>
+			<p className={styles.clauses}>
+				*Gratuit pour les enfants de moins de 12 ans, veuillez nous contacter si
+				vous en avez !
+			</p>
 		</section>
 	);
 });

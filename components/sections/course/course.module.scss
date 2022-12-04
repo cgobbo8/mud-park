@@ -189,6 +189,15 @@
 		&.draw {
 			transition: 0.5s ease-in;
 			opacity: 1;
+
+			&__surprises {
+				width: 50%;
+				height: 50%;
+				display: none;
+			}
 		}
 	}
+}
+
+.surprises {
 }

@@ -1,6 +1,12 @@
+import Link from "next/link";
+import { useMemo } from "react";
 import styles from "./footer.module.scss";
 
 export const Footer = () => {
+	const currentYear = useMemo(() => {
+		return new Date().getFullYear();
+	}, []);
+
 	return (
 		<footer className={styles.footer}>
 			{/* Top part */}
@@ -9,10 +15,10 @@ export const Footer = () => {
 				<div className={styles.footer__item}>
 					<h3 className={styles.footer__title}>A propos</h3>
 					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat odio
-						corporis earum, aspernatur odit, exercitationem cum cupiditate
-						eligendi dolorem ipsum provident vero facilis, tempora alias impedit
-						minima reprehenderit eius nobis.
+						Mud park est une course d’obstacle dans un cadre idylique. Pour une
+						première édition, MUD Park a décidé de voir les choses en grand,
+						avec pas moins de 22 obstacles et de nombreux happenings. Et tout ça
+						dans un park historique de 6 hectares !
 					</p>
 				</div>
 				{/* <div className={styles.footer__item}>
@@ -40,20 +46,22 @@ export const Footer = () => {
 					<h3 className={styles.footer__title}>Localisation</h3>
 					<ul className={styles.footer__list}>
 						<li className={styles.footer__list__item}>
-							<a
-								href='https://www.facebook.com/mudparkcourse'
+							<Link
+								target='_blank'
+								href='https://goo.gl/maps/ptbsm2maushoMfD68'
 								className={styles.footer__list__link}
 							>
-								1 rue de la gare
-							</a>
+								18 Rue Lacordaire
+							</Link>
 						</li>
 						<li className={styles.footer__list__item}>
-							<a
-								href='https://www.instagram.com/mudparkcourse/'
+							<Link
+								target='_blank'
+								href='https://goo.gl/maps/ptbsm2maushoMfD68'
 								className={styles.footer__list__link}
 							>
-								75000 Paris
-							</a>
+								81540 Sorèze
+							</Link>
 						</li>
 					</ul>
 				</div>
@@ -61,27 +69,30 @@ export const Footer = () => {
 			{/* Bottom part */}
 			<div className={styles.bottom}>
 				<div className={styles.bottom__left}>
-					Copyright © 2021 MudPark | Made by Corentin Gobbo
+					Copyright © {currentYear} MudPark | Made by Corentin Gobbo
 				</div>
 				<div className={styles.bottom__right}>
-					<a
-						href='https://www.facebook.com/mudparkcourse'
+					<Link
+						target='_blank'
+						href='https://www.facebook.com/profile.php?id=100088002883843'
 						className={styles.social__link}
 					>
 						<img src='/images/socials/facebook.svg' alt='' />
-					</a>
-					<a
-						href='https://www.instagram.com/mudparkcourse/'
+					</Link>
+					<Link
+						target='_blank'
+						href='https://www.instagram.com/mud_park/?next=%2F'
 						className={styles.social__link}
 					>
 						<img src='/images/socials/instagram.svg' alt='' />
-					</a>
-					<a
-						href='https://twitter.com/mudparkcourse'
+					</Link>
+					<Link
+						target='_blank'
+						href='tel:+336 09 28 25 49'
 						className={styles.social__link}
 					>
-						<img src='/images/socials/twitter.svg' alt='' />
-					</a>
+						<img src='/images/socials/whatsapp.svg' alt='' />
+					</Link>
 				</div>
 			</div>
 		</footer>

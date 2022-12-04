@@ -41,9 +41,22 @@ const CourseSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 			case CourseSectionState.KM_DRAW:
 				return "#F8DADA";
 			case CourseSectionState.SURPRISES_DRAW:
-				return "#FFF";
+				return "#F8F0CA";
 			default:
 				return "#FFF";
+		}
+	}, [currentState]);
+
+	const currentSquareSize = useMemo(() => {
+		switch (currentState) {
+			case CourseSectionState.EVERYONE_DRAW:
+				return "80%";
+			case CourseSectionState.KM_DRAW:
+				return "70%";
+			case CourseSectionState.SURPRISES_DRAW:
+				return "62%";
+			default:
+				return "0";
 		}
 	}, [currentState]);
 
@@ -214,17 +227,19 @@ const CourseSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 							Le parcours
 						</h3>
 						<p className={styles["course-content-text-bloc-text"]}>
-							Une course dans un cadre idylique. Au coeur d’un parc historique,
-							vous vous dépasserez lorem ipsum dae ic toupium.
+							Au coeur du parc historique de l&apos;Abbaye École de Sorèze,
+							prenez votre temps sur ce parcours qui vous fera traverser des
+							endroits inédits pour beaucoup... Ouvrez les yeux et profitez du
+							spectacle !
 						</p>
 					</div>
 					<div ref={obstacleRef} className={styles["course-content-text-bloc"]}>
 						<h3 className={styles["course-content-text-bloc-title"]}>
-							18 Obstacles
+							22 Obstacles
 						</h3>
 						<p className={styles["course-content-text-bloc-text"]}>
-							Sur la course se trouveront des obstacles de tout types. Votre
-							force, votre endurance et votre fun seront mis à rude épreuve.
+							Retour en enfance garanti, ces obstacles ludiques sont conçus pour
+							vous faire passer un merveilleux moment !
 						</p>
 					</div>
 					<div
@@ -232,11 +247,14 @@ const CourseSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 						className={styles["course-content-text-bloc"]}
 					>
 						<h3 className={styles["course-content-text-bloc-title"]}>
-							POUR TOUT LE MONDE
+							ÉGALEMENT POUR LES PETITS !
 						</h3>
 						<p className={styles["course-content-text-bloc-text"]}>
-							La course et ses obstacles sont accessibles pour tous les niveaux.
-							Pour les petits et les grands, les familles et les athètes.
+							Vous ne savez pas comment faire garder vos enfants pendant la
+							course ? On a pensé à tout ! Un circuit d&apos;environ 500m est
+							prévu et adapté pour tous les enfants. Structures gonflables,
+							légos géants, ils s&apos;amuseront comme les grands ! Et
+							évidemment, la course sera offerte pour eux !
 						</p>
 					</div>
 					<div ref={kmRef} className={styles["course-content-text-bloc"]}>
@@ -256,8 +274,8 @@ const CourseSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 							ET DES SURPRISES...
 						</h3>
 						<p className={styles["course-content-text-bloc-text"]}>
-							Des surprises vous attendent tout au long de la course. Des
-							surprises qui vous feront vous dépasser et vous amuser.
+							Des surprises vous attendent tout au long de la course et de la
+							journée.
 						</p>
 					</div>
 				</div>
@@ -266,12 +284,19 @@ const CourseSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 						<div
 							className={`${styles.image__square} ${
 								currentState === CourseSectionState.KM_DRAW ||
-								currentState === CourseSectionState.EVERYONE_DRAW
+								currentState === CourseSectionState.EVERYONE_DRAW ||
+								currentState === CourseSectionState.SURPRISES_DRAW
 									? styles.draw
 									: ""
-							}`}
+							} ${
+								currentState === CourseSectionState.SURPRISES_DRAW
+									? styles.draw__surprises
+									: ""
+							}'`}
 							style={{
 								backgroundColor: currentSquareColor,
+								width: currentSquareSize,
+								height: currentSquareSize,
 							}}
 						></div>
 						<img
@@ -318,8 +343,8 @@ const CourseSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 									? styles.draw
 									: ""
 							}`}
-							src='/images/course/team.png'
-							alt='team'
+							src='/images/course/surprises.png'
+							alt='surprises'
 						/>
 					</div>
 				)}
