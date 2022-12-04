@@ -13,7 +13,7 @@
 
 .title {
 	font-size: $title-3-size;
-	color: $title-2-color;
+	color: $text-color-light;
 	font-weight: $title-2-weight;
 	font-style: $title-2-style;
 	text-transform: $title-2-transformation;
@@ -66,6 +66,8 @@
 	&__content {
 		color: $text-color-light;
 		width: 400px;
+		font-size: 1.5rem;
+		padding: 2rem 0;
 
 		@media screen and (max-width: 700px) {
 			width: 90%;

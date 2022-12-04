@@ -67,6 +67,9 @@
 		font-weight: 600;
 		cursor: pointer;
 		transition: all 0.3s ease-in-out;
+		color: $white;
+		font-weight: 900;
+		font-style: italic;
 
 		&-ticket {
 			color: #fff;

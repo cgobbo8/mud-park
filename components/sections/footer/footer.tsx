@@ -69,7 +69,7 @@ export const Footer = () => {
 			{/* Bottom part */}
 			<div className={styles.bottom}>
 				<div className={styles.bottom__left}>
-					Copyright © {currentYear} MudPark | Made by Corentin Gobbo
+					Copyright © {currentYear} MudPark | Tous droits réservés
 				</div>
 				<div className={styles.bottom__right}>
 					<Link

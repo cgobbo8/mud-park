@@ -39,7 +39,7 @@ const CourseSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 			case CourseSectionState.EVERYONE_DRAW:
 				return "#edd587";
 			case CourseSectionState.KM_DRAW:
-				return "#F8DADA";
+				return "#E9DECB";
 			case CourseSectionState.SURPRISES_DRAW:
 				return "#F8F0CA";
 			default:
