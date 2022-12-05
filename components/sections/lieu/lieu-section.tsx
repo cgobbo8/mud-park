@@ -15,7 +15,7 @@ const LieuSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 					</p>
 				</div>
 				<Link
-					href='https://goo.gl/maps/4XE5fbfDVZ8NnYPg9'
+					href='https://www.cite-de-soreze.com'
 					className={styles.button}
 					rel='noreferrer'
 					target={"_blank"}
