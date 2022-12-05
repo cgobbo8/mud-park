@@ -37,6 +37,13 @@
 .logo {
 	height: 3rem;
 	cursor: pointer;
+	@media screen and (max-width: 400px) {
+		height: 2rem;
+	}
+
+	@media screen and (max-width: 300px) {
+		display: none;
+	}
 }
 
 .left {

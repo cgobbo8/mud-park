@@ -24,7 +24,7 @@ const LieuSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 				</Link>
 				<img
 					className='background'
-					src='/images/lieu/abbaye-2.jpeg'
+					src='/images/lieu/abbaye-2-min.jpeg'
 					alt='Abbaye école '
 				/>
 			</div>

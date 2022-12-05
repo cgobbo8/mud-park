@@ -198,7 +198,7 @@ const CourseSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 				</div>
 				{/* <img
 					className={styles["course-content-image"]}
-					src='/jogging.png'
+					src='/jogging-min.png'
 					alt='course'
 				/> */}
 				{/* <div className={imageClasses.join(" ")}></div> */}

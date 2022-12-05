@@ -5,7 +5,7 @@ const SponsorsSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 	return (
 		<div ref={ref}>
 			<div className={`${styles["section"]} ${styles["sponsors-section"]}`}>
-				<img src='/sponsors.png' alt='' />
+				<img src='/sponsors-min.png' alt='' />
 			</div>
 		</div>
 	);

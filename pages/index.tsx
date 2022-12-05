@@ -51,7 +51,7 @@ export default function Home() {
 					avec pas moins de 22 obstacles et de nombreux happenings. Et tout ça
 					dans un park historique de 6 hectares !'
 				/>
-				<meta property='og:image' content='/socio.png' />
+				<meta property='og:image' content='/socio-min.png' />
 				<meta property='og:url' content='https://mud-park.fr' />
 				<meta name='twitter:card' content='summary_large_image' />
 
@@ -64,7 +64,7 @@ export default function Home() {
 					dans un park historique de 6 hectares !'
 				/>
 
-				<meta name='twitter:image' content='/socio.png' />
+				<meta name='twitter:image' content='/socio-min.png' />
 
 				<meta name='twitter:site' content='@mudpark' />
 				<meta name='twitter:creator' content='@mudpark' />

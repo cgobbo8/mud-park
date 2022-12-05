@@ -227,10 +227,9 @@ const CourseSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 							Le parcours
 						</h3>
 						<p className={styles["course-content-text-bloc-text"]}>
-							Au coeur du parc historique de l&apos;Abbaye École de Sorèze,
-							prenez votre temps sur ce parcours qui vous fera traverser des
-							endroits inédits pour beaucoup... Ouvrez les yeux et profitez du
-							spectacle !
+							Au coeur du parc historique de la Cité de Sorèze, prenez votre
+							temps sur ce parcours qui vous fera traverser des endroits inédits
+							pour beaucoup... Ouvrez les yeux et profitez du spectacle !
 						</p>
 					</div>
 					<div ref={obstacleRef} className={styles["course-content-text-bloc"]}>
@@ -307,7 +306,7 @@ const CourseSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 									? styles.draw
 									: ""
 							}`}
-							src='/images/course/parcours.png'
+							src='/images/course/parcours-min.png'
 							alt='parcours'
 						/>
 						<img
@@ -318,7 +317,7 @@ const CourseSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 									? styles.draw
 									: ""
 							}`}
-							src='/images/course/obstacles.png'
+							src='/images/course/obstacles-min.png'
 							alt='obstacles'
 						/>
 						<img
@@ -327,7 +326,7 @@ const CourseSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 									? styles.draw
 									: ""
 							}`}
-							src='/images/course/team.png'
+							src='/images/course/team-min.png'
 							alt='team'
 						/>
 						<img
@@ -336,7 +335,7 @@ const CourseSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 							} ${
 								currentState === CourseSectionState.KM_DRAW ? styles.draw : ""
 							}`}
-							src='/images/course/double_parcours.png'
+							src='/images/course/double_parcours-min.png'
 							alt='parcours'
 						/>
 						<img
@@ -345,7 +344,7 @@ const CourseSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 									? styles.draw
 									: ""
 							}`}
-							src='/images/course/surprises.png'
+							src='/images/course/surprises-min.png'
 							alt='surprises'
 						/>
 					</div>

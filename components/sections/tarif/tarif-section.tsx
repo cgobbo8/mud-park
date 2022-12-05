@@ -96,7 +96,7 @@ const TarifSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 					<div className={styles.imageContainer}>
 						<img
 							className={styles.tarifImage}
-							src='/images/prices/duo.png'
+							src='/images/prices/duo-min.png'
 							alt='runner'
 						/>
 					</div>
@@ -125,7 +125,7 @@ const TarifSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 					<div className={styles.imageContainer}>
 						<img
 							className={styles.tarifImage}
-							src='/images/prices/grosse_team.png'
+							src='/images/prices/team-min.png'
 							alt='runner'
 						/>
 					</div>
@@ -154,7 +154,7 @@ const TarifSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 					<div className={styles.imageContainer}>
 						<img
 							className={styles.tarifImage}
-							src='/images/prices/grosse_team.png'
+							src='/images/prices/grosse_team-min.png'
 							alt='runner'
 						/>
 					</div>
