@@ -6,7 +6,7 @@
 	top: 0;
 	left: 50%;
 	transform: translateX(-50%);
-	width: calc(100% - $marge * 2);
+	width: calc(100% - $marge);
 	height: $navbar-height;
 
 	display: flex;
@@ -23,6 +23,7 @@
 		margin-top: 1rem;
 		border-radius: 16pxc;
 		backdrop-filter: blur(10px);
+		width: calc(100% - $marge * 2);
 	}
 
 	@media screen and (max-width: 900px) {
@@ -49,6 +50,9 @@
 	font-style: italic;
 	font-size: 1rem;
 	font-weight: 900;
+
+	// prevent text from wrapping
+	white-space: nowrap;
 
 	@media screen and (max-width: 490px) {
 		display: none;
