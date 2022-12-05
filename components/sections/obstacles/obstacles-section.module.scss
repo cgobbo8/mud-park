@@ -28,6 +28,10 @@
 	@media screen and (max-width: 400px) {
 		font-size: $title-2-size-xs;
 	}
+
+	@media screen and (max-width: 350px) {
+		font-size: 3rem;
+	}
 }
 
 .faq {
