@@ -101,7 +101,7 @@ export default function Home() {
 				<main>
 					<IntroductionSection />
 					<CourseSection ref={courseSectionRef} />
-					<TarifSection ref={tarifSectionRef} contactRef={contactSectionRef} />
+					<TarifSection ref={tarifSectionRef} />
 					<ObstaclesSection ref={obstaclesSectionRef} />
 					<LieuSection ref={lieuSectionRef} />
 					{/* <SponsorsSection ref={sponsorsSectionRef} /> */}
