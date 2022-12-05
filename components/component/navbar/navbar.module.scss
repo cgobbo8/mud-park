@@ -24,6 +24,9 @@
 		border-radius: 16pxc;
 		backdrop-filter: blur(10px);
 		width: calc(100% - $marge * 2);
+		@media screen and (max-width: 900px) {
+			width: calc(100% - $marge);
+		}
 	}
 
 	@media screen and (max-width: 900px) {
