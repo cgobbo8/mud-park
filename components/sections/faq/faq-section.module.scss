@@ -15,7 +15,10 @@
 	font-weight: $title-2-weight;
 	font-style: $title-2-style;
 	text-transform: $title-2-transformation;
-	
+
+	@media screen and (max-width: 400px) {
+		font-size: $title-2-size-xs;
+	}
 }
 
 .faq {

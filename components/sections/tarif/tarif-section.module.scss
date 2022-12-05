@@ -41,6 +41,10 @@ $background-padding: 200px;
 	text-transform: $title-2-transformation;
 	// text align center
 	text-align: center;
+
+	@media screen and (max-width: 400px) {
+		font-size: $title-2-size-xs;
+	}
 }
 
 .baseline {

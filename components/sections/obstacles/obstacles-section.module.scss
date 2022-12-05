@@ -25,6 +25,9 @@
 		background-color: $accent;
 		color: white;
 	}
+	@media screen and (max-width: 400px) {
+		font-size: $title-2-size-xs;
+	}
 }
 
 .faq {
