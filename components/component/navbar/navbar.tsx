@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { useContext, useEffect, useState } from "react";
+import ModalContext, { ModalContextType } from "../../../contexts/ModalContext";
 import ScrollContext, {
 	ScrollContextType,
 } from "../../../contexts/ScrollContext";
@@ -51,6 +52,8 @@ export const Navbar = ({ sectionRefs }: NavbarProps) => {
 	const [isOnTop, setIsOnTop] = useState(true);
 	const sectionOnScreen: PossibleSectionOnScreen = useWhichSectionIsOnScreen();
 
+	const { setIsModalOpen }: ModalContextType = useContext(ModalContext);
+
 	useEffect(() => {
 		const handleScroll = () => {
 			if (window.scrollY > 80) {
@@ -62,6 +65,10 @@ export const Navbar = ({ sectionRefs }: NavbarProps) => {
 		window.addEventListener("scroll", handleScroll);
 		return () => window.removeEventListener("scroll", handleScroll);
 	}, []);
+
+	const handleModalOpening = () => {
+		setIsModalOpen(true);
+	};
 
 	const goToCourseSection = (e: React.MouseEvent<HTMLAnchorElement>) => {
 		e.preventDefault();
@@ -160,18 +167,14 @@ export const Navbar = ({ sectionRefs }: NavbarProps) => {
 					</a>
 				</li>
 
-				<Link
-					href='https://www.vostickets.fr/Billet?ID=ABBAYE_ECOLE_SOREZE'
-					className={styles["menu-cta"]}
-					target='_blank'
-				>
+				<button onClick={handleModalOpening} className={styles["menu-cta"]}>
 					<img
 						className={styles["menu-cta-ticket"]}
 						src='/ticket.svg'
 						alt='ticket'
 					/>
 					Réserver
-				</Link>
+				</button>
 			</ul>
 		</nav>
 	);

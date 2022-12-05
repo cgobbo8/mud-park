@@ -22,6 +22,15 @@ $background-padding: 200px;
 		z-index: -1;
 		transform: skewY(5deg);
 	}
+
+	:global {
+		.link {
+			cursor: pointer;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
 }
 
 .title {
@@ -39,6 +48,7 @@ $background-padding: 200px;
 	font-weight: 600;
 	font-style: italic;
 	text-align: center;
+	margin-bottom: 1rem;
 }
 
 .tarifs {
@@ -62,7 +72,6 @@ $background-padding: 200px;
 	border-radius: 8px;
 	transition: all 0.3s ease-in-out;
 	position: relative;
-	overflow: hidden;
 	// border: 2px solid $white;
 
 	@media screen and (min-width: 900px) {
@@ -113,6 +122,7 @@ $background-padding: 200px;
 			text-transform: uppercase;
 			text-align: center;
 			font-style: italic;
+			position: relative;
 		}
 
 		.baseline {
@@ -122,6 +132,26 @@ $background-padding: 200px;
 			font-style: normal;
 			text-align: center;
 			font-style: italic;
+		}
+
+		.promo {
+			font-size: 2rem;
+			font-weight: 900;
+			font-style: normal;
+			text-transform: uppercase;
+			text-align: center;
+			font-style: italic;
+			// transform: translate(100%, -20%);
+			color: $error;
+			font-size: 1rem;
+			position: absolute;
+			top: 0;
+			right: 1rem;
+			transform: translate(0, -50%);
+			padding: 0.5rem;
+			border-radius: 8px;
+			background-color: $error;
+			color: $white;
 		}
 	}
 
@@ -168,4 +198,13 @@ $background-padding: 200px;
 	text-transform: none;
 	text-align: left;
 	font-style: italic;
+}
+
+.imageContainer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
 }

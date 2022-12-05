@@ -15,8 +15,8 @@ export const Footer = () => {
 				<div className={styles.footer__item}>
 					<h3 className={styles.footer__title}>A propos</h3>
 					<p>
-						Mud park est une course d’obstacle dans un cadre idylique. Pour une
-						première édition, MUD Park a décidé de voir les choses en grand,
+						MUD PARK est une course d’obstacle dans un cadre idyllique. Pour une
+						première édition, la MUD PARK a décidé de voir les choses en grand,
 						avec pas moins de 22 obstacles et de nombreux happenings. Et tout ça
 						dans un park historique de 6 hectares !
 					</p>
@@ -51,7 +51,7 @@ export const Footer = () => {
 								href='https://goo.gl/maps/ptbsm2maushoMfD68'
 								className={styles.footer__list__link}
 							>
-								18 Rue Lacordaire
+								Abbaye école
 							</Link>
 						</li>
 						<li className={styles.footer__list__item}>

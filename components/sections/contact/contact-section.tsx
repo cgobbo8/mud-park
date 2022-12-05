@@ -42,7 +42,7 @@ const ContactSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 	};
 
 	return (
-		<footer ref={ref}>
+		<section id='contact' ref={ref}>
 			<div className={`${styles["section"]} ${styles["contact-section"]}`}>
 				<h2 className={styles["contact-title"]}>
 					Des questions ? Contactez nous !
@@ -54,7 +54,7 @@ const ContactSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 					alt='hero with letter'
 				/>
 			</div>
-		</footer>
+		</section>
 	);
 });
 

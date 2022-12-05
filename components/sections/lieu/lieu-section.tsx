@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import styles from "./lieu-section.module.scss";
 
@@ -13,16 +14,17 @@ const LieuSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 						héberge en son sein un magnifique parc.
 					</p>
 				</div>
-				<a
-					href='https://goo.gl/maps/QhDQz1xHLmBGmYzP7'
+				<Link
+					href='https://goo.gl/maps/4XE5fbfDVZ8NnYPg9'
 					className={styles.button}
 					rel='noreferrer'
+					target={"_blank"}
 				>
 					Accéder à l&apos;abbaye
-				</a>
+				</Link>
 				<img
 					className='background'
-					src='/images/lieu/abbaye-1.jpeg'
+					src='/images/lieu/abbaye-2.jpeg'
 					alt='Abbaye école '
 				/>
 			</div>

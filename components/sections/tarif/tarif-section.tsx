@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React, { useContext, useEffect, useState } from "react";
+import ModalContext, { ModalContextType } from "../../../contexts/ModalContext";
 import ScrollContext, {
 	ScrollContextType,
 } from "../../../contexts/ScrollContext";
@@ -10,6 +11,25 @@ const dDay = new Date("2023-05-23T10:00:00");
 
 const TarifSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 	const [nbDaysBeforeDDay, setNbDaysBeforeDDay] = useState(0);
+
+	const { setIsModalOpen }: ModalContextType = useContext(ModalContext);
+
+	const handleModalOpening = (e: React.MouseEvent<HTMLButtonElement>) => {
+		e.preventDefault();
+		e.stopPropagation();
+		setIsModalOpen(true);
+	};
+
+	const scrollToContact = (e: React.MouseEvent<HTMLAnchorElement>) => {
+		e.preventDefault();
+		e.stopPropagation();
+
+		const contactSectionRef = document.getElementById("contact");
+
+		if (contactSectionRef) {
+			contactSectionRef.scrollIntoView({ behavior: "smooth" });
+		}
+	};
 
 	const [isIntersecting, count]: UseOnScreenReturn = useOnScreen(
 		ref as React.RefObject<HTMLDivElement>
@@ -46,42 +66,54 @@ const TarifSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 					</>
 				)}
 			</h3>
+			<h3 className={styles.baseline}>
+				Profitez des <span className='accent'>fêtes</span> et des{" "}
+				<span className='accent'>promotions</span> !
+			</h3>
 
 			<div className={styles.tarifs}>
 				<Link
 					href='https://www.vostickets.fr/Billet?ID=ABBAYE_ECOLE_SOREZE'
 					target='_blank'
-					className={styles.tarif}
+					onClick={handleModalOpening}
+					className={`${styles.tarif} ${styles.prime}`}
 				>
 					<h3 className={styles.tarifTitle}>Petit commité</h3>
 					<div className={styles.tarifPrice}>
-						<div className='price'>35€</div>
+						<div className='price'>
+							<span>35€</span>
+						</div>
 						<div className='baseline'>Par personne</div>
+						<div className='promo'>Au lieu de 40€</div>
 					</div>
 					<button className={styles.reservationButton}>
 						Je prends mon billet
 					</button>
 					<p className={styles.tarifDescription}>
 						Vous êtes entre 1 et 3 personnes ? <br />
-						Qui a besoin d&apos;être 30 pour courir ? Personne et surtout pas
-						vous !
+						Pas besoin d&apos;être 30 pour courir ?
 					</p>
-
-					<img
-						className={styles.tarifImage}
-						src='/images/prices/duo.png'
-						alt='runner'
-					/>
+					<div className={styles.imageContainer}>
+						<img
+							className={styles.tarifImage}
+							src='/images/prices/duo.png'
+							alt='runner'
+						/>
+					</div>
 				</Link>
 				<Link
 					href='https://www.vostickets.fr/Billet?ID=ABBAYE_ECOLE_SOREZE'
 					target='_blank'
-					className={styles.tarif}
+					onClick={handleModalOpening}
+					className={`${styles.tarif} ${styles.prime}`}
 				>
 					<h3 className={styles.tarifTitle}>Petite équipe</h3>
 					<div className={styles.tarifPrice}>
-						<div className='price'>32€</div>
+						<div className='price'>
+							<span>32€</span>
+						</div>
 						<div className='baseline'>Par personne</div>
+						<div className='promo'>Au lieu de 36€</div>
 					</div>
 					<button className={styles.reservationButton}>
 						Je prends mon billet
@@ -90,22 +122,27 @@ const TarifSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 						Vous êtes 4 à 6 personnes et vous souhaitez courir ensemble ?
 						C&apos;est possible ! Bénificiez d&apos;un tarif préférentiel.
 					</p>
-
-					<img
-						className={styles.tarifImage}
-						src='/images/prices/team.png'
-						alt='runner'
-					/>
+					<div className={styles.imageContainer}>
+						<img
+							className={styles.tarifImage}
+							src='/images/prices/grosse_team.png'
+							alt='runner'
+						/>
+					</div>
 				</Link>
 				<Link
 					href='https://www.vostickets.fr/Billet?ID=ABBAYE_ECOLE_SOREZE'
 					target='_blank'
+					onClick={handleModalOpening}
 					className={`${styles.tarif} ${styles.prime}`}
 				>
 					<h3 className={styles.tarifTitle}>Grosse team</h3>
 					<div className={styles.tarifPrice}>
-						<div className='price'>29€</div>
+						<div className='price'>
+							<span>29€</span>
+						</div>
 						<div className='baseline'>Par personne</div>
+						<div className='promo'>Au lieu de 32€</div>
 					</div>
 					<button className={styles.reservationButton}>
 						Je prends mon billet
@@ -114,12 +151,13 @@ const TarifSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 						Vous avez réussi à réunir une équipe de 7 à 10 personnes ? Vous
 						bénéficiez d&apos;un tarif encore plus avantageux !
 					</p>
-
-					<img
-						className={styles.tarifImage}
-						src='/images/prices/grosse_team.png'
-						alt='runner'
-					/>
+					<div className={styles.imageContainer}>
+						<img
+							className={styles.tarifImage}
+							src='/images/prices/grosse_team.png'
+							alt='runner'
+						/>
+					</div>
 				</Link>
 			</div>
 			<p className={styles.clauses}>*Le tarif inclut toutes les surprises !</p>
@@ -128,8 +166,15 @@ const TarifSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 				billetterie
 			</p>
 			<p className={styles.clauses}>
-				*Gratuit pour les enfants de moins de 14 ans, veuillez nous contacter si
-				vous en avez !
+				*Gratuit pour les enfants de moins de 14 ans, veuillez nous{" "}
+				<span onClick={scrollToContact} className='accent link'>
+					contacter
+				</span>{" "}
+				si vous en avez !
+			</p>
+			<p className={styles.clauses}>
+				*MUD PARK est un évènement sportif, vous devez donc obligatoirement être
+				munis d&apos;un certificat medical valide pour particper à la course.
 			</p>
 		</section>
 	);

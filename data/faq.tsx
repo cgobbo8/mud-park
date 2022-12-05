@@ -1,6 +1,6 @@
 export const faqContent = [
 	{
-		label: "Quelle est la durée de la course",
+		label: "Quelle est la durée de la course ?",
 		content:
 			"Suivant le niveau de chacun il faut compter de 1h à 3h de temps de course.",
 	},
@@ -46,26 +46,25 @@ export const faqContent = [
 		content:
 			"Le remboursement sera possible avec un certificat médical viable.",
 	},
-	// {
-	// 	label: "Peut-on participer à un autre créneau horaire si on rate le notre ?",
-	// 	content:
-	// 		"Oui, il suffit de nous contacter par mail pour nous le signaler et nous vous proposerons un autre créneau.",
-	// },
-	// {
-	// 	label: "Les places sont-elles nominatives ?",
-	// 	content:
-	// 		"Oui, chaque billet est nominatif et vous devez donc vous présenter avec votre billet.",
-	// },
-	// {
-	// 	label: "Quels affaires je dois prendre pour le jour de la course ?",
-	// 	content:
-	// 		"Des chaussures de sport, ..."
-	// },
-	// {
-	// 	label: "Est-ce qu’on pourra manger sur place ?",
-	// 	content:
-	// 		"Oui, nous proposerons des boissons et des sandwichs sur place."
-	// },
+	{
+		label:
+			"Peut-on participer à un autre créneau horaire si on rate le notre ?",
+		content:
+			"Le créneau horaire sera définitif mais si jamais vous avez un impératif rapprochez vous de l’organisation pour éventuellement trouver une solution ",
+	},
+	{
+		label: "Les places sont-elles nominatives ?",
+		content: "Les places sont nominatives avec certificat médical ",
+	},
+	{
+		label: "Quels affaires je dois prendre pour le jour de la course ?",
+		content:
+			"L'important c'est d'être à l'aise, alors munissez vous de vêtements de sport et de bonnes chaussures pour être à l’aise sur les obstacles. Ou alors, vous pouvez même utiliser vos déguisements les plus fous pour sublimer ce moment ",
+	},
+	{
+		label: "Est-ce qu’on pourra manger sur place ?",
+		content: "De la restauration sera sur place.",
+	},
 	{
 		label: "Est-ce que les enfants sont acceptés ?",
 		content:
@@ -84,7 +83,7 @@ export const faqContent = [
 	{
 		label: "Il y a t-il des prix à gagner ?",
 		content:
-			"Non, MUD Park ne souhaite pas être une course, il n’y aura donc pas de vainqueurs. Cependant cela ne vous empêche pas de vous challenger avec vos amis si vous le souhaitez !",
+			"Non, MUD PARK ne souhaite pas être une course, il n’y aura donc pas de vainqueurs. Cependant cela ne vous empêche pas de vous challenger avec vos amis si vous le souhaitez !",
 	},
 	{
 		label: "A partir de quand on pourra s’inscrire ?",

@@ -36,7 +36,7 @@ export const Header = ({ sectionRefs }: HeaderProps) => {
 					alt='plans'
 				/>
 				<div ref={title} className={styles["title-plan"]}>
-					<h1>MUD Park 2023</h1>
+					<h1>MUD PARK 2023</h1>
 				</div>
 				<img
 					ref={plan2}

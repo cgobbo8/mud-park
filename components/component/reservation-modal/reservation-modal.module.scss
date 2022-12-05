@@ -6,7 +6,7 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: rgba(0, 0, 0, 0.267);
 	z-index: 100;
 	display: flex;
 	justify-content: center;
@@ -23,17 +23,35 @@
 .reservation-modal {
 	background-color: #fff;
 	border-radius: 16px;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-	padding: $marge;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.157);
+	padding: 2rem;
 	position: relative;
 	width: 100%;
 	max-width: 600px;
 	z-index: 101;
 	transition: 0.3s ease-in;
-	transform: scale(0.8);
+	transform: scale(0.8) translateY(100px);
 	opacity: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	margin: 2rem;
+	:global {
+		.message {
+			display: flex;
+
+			span {
+				margin-right: 1rem;
+			}
+
+			// and not the first
+			&:not(:first-child) {
+				margin-top: 2rem;
+			}
+		}
+	}
 	&.active {
-		transform: scale(1);
+		transform: scale(1) translateY(0);
 		opacity: 1;
 	}
 	&__close {
@@ -70,5 +88,31 @@
 			cursor: auto;
 			pointer-events: none;
 		}
+	}
+}
+
+.menu-cta {
+	padding: 0.5rem 1rem;
+	border-radius: 0.5rem;
+	background-color: $accent;
+	color: $white;
+	font-size: 1rem;
+	font-weight: 600;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+	color: $white;
+	font-weight: 900;
+	font-style: italic;
+	margin-top: 2rem;
+
+	&-ticket {
+		color: #fff;
+		height: 0.7rem;
+		transform: rotate(130deg);
+		margin-right: 0.5em;
+	}
+
+	&:hover {
+		transform: scale(0.98);
 	}
 }

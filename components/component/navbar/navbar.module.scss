@@ -6,7 +6,7 @@
 	top: 0;
 	left: 50%;
 	transform: translateX(-50%);
-	width: calc(100% - $marge);
+	width: calc(100% - $marge * 2);
 	height: $navbar-height;
 
 	display: flex;
@@ -23,6 +23,10 @@
 		margin-top: 1rem;
 		border-radius: 16pxc;
 		backdrop-filter: blur(10px);
+	}
+
+	@media screen and (max-width: 900px) {
+		width: calc(100% - $marge);
 	}
 }
 

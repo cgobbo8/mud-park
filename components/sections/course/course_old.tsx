@@ -161,7 +161,7 @@ const CourseSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 							Le parcours
 						</h3>
 						<p className={styles["course-content-text-bloc-text"]}>
-							Une course dans un cadre idylique. Au coeur d’un parc historique,
+							Une course dans un cadre idyllique. Au coeur d’un parc historique,
 							vous vous dépasserez lorem ipsum dae ic toupium.
 						</p>
 					</div>

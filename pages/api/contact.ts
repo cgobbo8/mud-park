@@ -34,7 +34,7 @@ export default function handler(
 	const mailOptionsForCorentin = {
 		from: "hello@example.com",
 		to: "corentin.gobbo@gmail.com",
-		subject: "Nouveau message de MUD Park",
+		subject: "Nouveau message de MUD PARK",
 		text: `
 Type de contact: ${emailContent.type_contact}
 Email: ${emailContent.email}
@@ -55,7 +55,7 @@ Message: ${emailContent.message}`,
 	const mailOptionsForFlorian = {
 		from: "hello@example.com",
 		to: "flocoachsportif@gmail.com",
-		subject: "Nouveau message de MUD Park",
+		subject: "Nouveau message de MUD PARK",
 		text: `
 Type de contact: ${emailContent.type_contact}
 Email: ${emailContent.email}

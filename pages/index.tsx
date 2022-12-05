@@ -33,21 +33,21 @@ export default function Home() {
 		<div className={styles.container}>
 			<Head>
 				{/* Create perfect SEO Head */}
-				<title>MUD Park 2023</title>
+				<title>MUD PARK 2023</title>
 				<meta
 					name='description'
-					content='Mud park est une course d’obstacle dans un cadre idylique. Pour une
-					première édition, MUD Park a décidé de voir les choses en grand,
+					content='MUD PARK est une course d’obstacle dans un cadre idyllique. Pour une
+					première édition, MUD PARK a décidé de voir les choses en grand,
 					avec pas moins de 22 obstacles et de nombreux happenings. Et tout ça
 					dans un park historique de 6 hectares !'
 				/>
 				<link rel='icon' href='/favicon.ico' />
 
-				<meta property='og:title' content='MUD Park 2023' />
+				<meta property='og:title' content='MUD PARK 2023' />
 				<meta
 					property='og:description'
-					content='Mud park est une course d’obstacle dans un cadre idylique. Pour une
-					première édition, MUD Park a décidé de voir les choses en grand,
+					content='MUD PARK est une course d’obstacle dans un cadre idyllique. Pour une
+					première édition, MUD PARK a décidé de voir les choses en grand,
 					avec pas moins de 22 obstacles et de nombreux happenings. Et tout ça
 					dans un park historique de 6 hectares !'
 				/>
@@ -55,11 +55,11 @@ export default function Home() {
 				<meta property='og:url' content='https://mud-park.fr' />
 				<meta name='twitter:card' content='summary_large_image' />
 
-				<meta name='twitter:title' content='MUD Park 2023' />
+				<meta name='twitter:title' content='MUD PARK 2023' />
 				<meta
 					name='twitter:description'
-					content='Mud park est une course d’obstacle dans un cadre idylique. Pour une
-					première édition, MUD Park a décidé de voir les choses en grand,
+					content='MUD PARK est une course d’obstacle dans un cadre idyllique. Pour une
+					première édition, MUD PARK a décidé de voir les choses en grand,
 					avec pas moins de 22 obstacles et de nombreux happenings. Et tout ça
 					dans un park historique de 6 hectares !'
 				/>
@@ -71,11 +71,11 @@ export default function Home() {
 
 				<meta name='viewport' content='width=device-width, initial-scale=1' />
 
-				<title>MUD Park</title>
+				<title>MUD PARK</title>
 				<meta
 					name='description'
-					content='Mud park est une course d’obstacle dans un cadre idylique. Pour une
-					première édition, MUD Park a décidé de voir les choses en grand,
+					content='MUD PARK est une course d’obstacle dans un cadre idyllique. Pour une
+					première édition, MUD PARK a décidé de voir les choses en grand,
 					avec pas moins de 22 obstacles et de nombreux happenings. Et tout ça
 					dans un park historique de 6 hectares !'
 				/>
@@ -101,7 +101,7 @@ export default function Home() {
 				<main>
 					<IntroductionSection />
 					<CourseSection ref={courseSectionRef} />
-					<TarifSection ref={tarifSectionRef} />
+					<TarifSection ref={tarifSectionRef} contactRef={contactSectionRef} />
 					<ObstaclesSection ref={obstaclesSectionRef} />
 					<LieuSection ref={lieuSectionRef} />
 					{/* <SponsorsSection ref={sponsorsSectionRef} /> */}

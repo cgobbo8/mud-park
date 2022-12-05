@@ -4,20 +4,58 @@ import ModalContext, { ModalContextType } from "../../../contexts/ModalContext";
 import styles from "./reservation-modal.module.scss";
 
 export const ReservationModal = () => {
-	const { isModalOpen }: ModalContextType = useContext(ModalContext);
+	const { isModalOpen, setIsModalOpen }: ModalContextType =
+		useContext(ModalContext);
+
+	const handleModalClose = (e: React.MouseEvent<HTMLDivElement>) => {
+		e.preventDefault();
+		e.stopPropagation();
+		setIsModalOpen(false);
+	};
 
 	return (
 		<div
 			className={`${styles["reservation-modal--overlay"]} ${
 				isModalOpen && styles.active
 			}`}
+			onClick={handleModalClose}
 		>
 			<div
 				className={`${styles["reservation-modal"]} ${
 					isModalOpen && styles.active
 				}`}
+				onClick={(e) => e.stopPropagation()}
 			>
-				<h1>Réservez</h1>
+				<div className='message'>
+					<span>⚠️</span>
+					<p>
+						MUD PARK étant un évènement sportif, vous devez{" "}
+						<strong>obligatoirement</strong> avoir un certificat médical valide
+						et à jour le jour de la course !
+					</p>
+				</div>
+				<div className='message'>
+					<span>ℹ️</span>
+					<p>
+						Choisissez bien votre créneau horaire sur la billetterie, vous ne
+						pourrez pas changer de créneau une fois votre réservation effectuée.
+					</p>
+				</div>
+
+				<Link
+					href='https://www.vostickets.fr/Billet?ID=ABBAYE_ECOLE_SOREZE'
+					className={styles["menu-cta"]}
+					target='_blank'
+				>
+					<img
+						className={styles["menu-cta-ticket"]}
+						src='/ticket.svg'
+						alt='ticket'
+					/>
+					Continuer vers la réservation
+				</Link>
+
+				{/* <h1>Réservez</h1>
 				<p>
 					Plusieurs heures de départ sont disponibles, sélectionnez celle que
 					vous souhaitez !
@@ -131,7 +169,7 @@ export const ReservationModal = () => {
 					>
 						17h30
 					</Link>
-				</div>
+				</div> */}
 			</div>
 		</div>
 	);
