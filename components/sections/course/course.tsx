@@ -218,7 +218,7 @@ const CourseSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 
 	return (
 		<section ref={ref} className={styles.section}>
-			<h2 className={styles.title}>La course</h2>
+			<h2 className={styles.title}>L&apos;évènement</h2>
 
 			<div className={styles["course-content"]}>
 				<div className={styles["course-content-text"]}>

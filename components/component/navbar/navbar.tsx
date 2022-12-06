@@ -136,7 +136,7 @@ export const Navbar = ({ sectionRefs }: NavbarProps) => {
 					}`}
 				>
 					<a href='#' onClick={goToCourseSection}>
-						Course
+						Évènement
 					</a>
 				</li>
 				<li

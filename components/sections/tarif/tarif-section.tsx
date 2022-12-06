@@ -67,8 +67,12 @@ const TarifSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 				)}
 			</h3>
 			<h3 className={styles.baseline}>
-				Profitez des <span className='accent'>fêtes</span> et des{" "}
-				<span className='accent'>promotions</span> !
+				Profitez des <span className='accent'>fêtes</span> pour offrir un beau
+				moment !
+			</h3>
+			<h3 className={styles.baseline}>
+				Profitez des <span className='accent'>promotions</span> les deux
+				premiers mois !
 			</h3>
 
 			<div className={styles.tarifs}>
