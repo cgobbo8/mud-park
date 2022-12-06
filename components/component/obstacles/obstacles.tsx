@@ -43,7 +43,7 @@ export const Obstacles = () => {
 				changeFamilyType();
 				return 0;
 			} else {
-				return prevCount + deltaTime * 0.01;
+				return prevCount + deltaTime * 0.008;
 			}
 		});
 	});

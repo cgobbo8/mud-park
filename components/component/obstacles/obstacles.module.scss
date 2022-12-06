@@ -16,7 +16,7 @@
 		&--item {
 			margin-bottom: $marge / 4;
 			font-size: $title-3-size;
-			font-style: italic;
+			// font-style: italic;
 			font-weight: 900;
 			text-transform: uppercase;
 			color: $text-color-light;
@@ -31,6 +31,7 @@
 			will-change: background-position;
 			padding-right: 10px;
 			position: relative;
+			transform: skew(-10deg);
 
 			&.active {
 				// color: $accent;
@@ -44,9 +45,9 @@
 				}
 			}
 
-			&:hover {
+			&:not(.active):hover {
 				// darker accent color
-				color: lighten($accent, 15%);
+				color: #ff7c5b63;
 			}
 
 			.bar {
