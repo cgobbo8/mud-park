@@ -28,7 +28,7 @@ export const IntroductionSection = () => {
 					grand, avec pas moins de 22 obstacles et de nombreux happenings.
 					<br />
 					<br />
-					Et tout ça dans un park historique de 6 hectares !
+					Et tout ça dans un parc historique de 6 hectares !
 				</p>
 				<div className={styles.year}>
 					<p>2023</p>

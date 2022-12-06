@@ -18,7 +18,7 @@ export const Footer = () => {
 						MUD PARK est une course d’obstacle dans un cadre idyllique. Pour une
 						première édition, la MUD PARK a décidé de voir les choses en grand,
 						avec pas moins de 22 obstacles et de nombreux happenings. Et tout ça
-						dans un park historique de 6 hectares !
+						dans un parc historique de 6 hectares !
 					</p>
 				</div>
 				{/* <div className={styles.footer__item}>
@@ -48,16 +48,25 @@ export const Footer = () => {
 						<li className={styles.footer__list__item}>
 							<Link
 								target='_blank'
-								href='https://goo.gl/maps/ptbsm2maushoMfD68'
+								href='https://goo.gl/maps/he4ZApPhHqBRd6op6'
 								className={styles.footer__list__link}
 							>
-								Abbaye école
+								Cité de Sorèze
 							</Link>
 						</li>
 						<li className={styles.footer__list__item}>
 							<Link
 								target='_blank'
-								href='https://goo.gl/maps/ptbsm2maushoMfD68'
+								href='https://goo.gl/maps/he4ZApPhHqBRd6op6'
+								className={styles.footer__list__link}
+							>
+								1 Rue Saint-Martin
+							</Link>
+						</li>
+						<li className={styles.footer__list__item}>
+							<Link
+								target='_blank'
+								href='https://goo.gl/maps/he4ZApPhHqBRd6op6'
 								className={styles.footer__list__link}
 							>
 								81540 Sorèze

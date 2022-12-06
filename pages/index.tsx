@@ -39,7 +39,7 @@ export default function Home() {
 					content='MUD PARK est une course d’obstacle dans un cadre idyllique. Pour une
 					première édition, MUD PARK a décidé de voir les choses en grand,
 					avec pas moins de 22 obstacles et de nombreux happenings. Et tout ça
-					dans un park historique de 6 hectares !'
+					dans un parc historique de 6 hectares !'
 				/>
 				<link rel='icon' href='/favicon.ico' />
 
@@ -49,7 +49,7 @@ export default function Home() {
 					content='MUD PARK est une course d’obstacle dans un cadre idyllique. Pour une
 					première édition, MUD PARK a décidé de voir les choses en grand,
 					avec pas moins de 22 obstacles et de nombreux happenings. Et tout ça
-					dans un park historique de 6 hectares !'
+					dans un parc historique de 6 hectares !'
 				/>
 				<meta property='og:image' content='/socio-min.png' />
 				<meta property='og:url' content='https://mud-park.fr' />
@@ -61,7 +61,7 @@ export default function Home() {
 					content='MUD PARK est une course d’obstacle dans un cadre idyllique. Pour une
 					première édition, MUD PARK a décidé de voir les choses en grand,
 					avec pas moins de 22 obstacles et de nombreux happenings. Et tout ça
-					dans un park historique de 6 hectares !'
+					dans un parc historique de 6 hectares !'
 				/>
 
 				<meta name='twitter:image' content='/socio-min.png' />
@@ -77,7 +77,7 @@ export default function Home() {
 					content='MUD PARK est une course d’obstacle dans un cadre idyllique. Pour une
 					première édition, MUD PARK a décidé de voir les choses en grand,
 					avec pas moins de 22 obstacles et de nombreux happenings. Et tout ça
-					dans un park historique de 6 hectares !'
+					dans un parc historique de 6 hectares !'
 				/>
 
 				<meta httpEquiv='X-UA-Compatible' content='IE=edge' />

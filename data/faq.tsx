@@ -35,7 +35,7 @@ export const faqContent = [
 	{
 		label: "Combien coûte l'inscription pour les enfants ?",
 		content:
-			"Si les parents sont inscrits sur le parcours d’obstacles, ce sera donc gratuit pour les enfants.",
+			"Si les parents sont inscrits sur le parcours d’obstacles, l'entrée sera gratuite pour leurs enfants de moins de 14ans.",
 	},
 	{
 		label: "Peut on s'inscrire sur place ?",
@@ -76,12 +76,12 @@ export const faqContent = [
 			"Beaucoup de places sont disponibles aux abords du Parc de l’Abbaye Ecole.",
 	},
 	{
-		label: "Il y a t-il des transports en commun pour venir ?",
+		label: "Y-a-til  des transports en commun pour venir ?",
 		content:
 			"Oui un arrêt de bus se trouve juste à coté du parc de l’Abbaye Ecole. Il faudra emprunter la ligne de bus 761 qui va de Revel à Castres.",
 	},
 	{
-		label: "Il y a t-il des prix à gagner ?",
+		label: "Y-a-til  des prix à gagner ?",
 		content:
 			"Non, MUD PARK ne souhaite pas être une course, il n’y aura donc pas de vainqueurs. Cependant cela ne vous empêche pas de vous challenger avec vos amis si vous le souhaitez !",
 	},
