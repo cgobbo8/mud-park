@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import Script from "next/script";
 import { useEffect, useRef } from "react";
 import { ParallaxProvider } from "react-scroll-parallax";
 import { Header } from "../components/component/header";
@@ -89,6 +90,25 @@ export default function Home() {
 					content='ww-F-fLeWKQ3SdPH6ORDClm5eTppB5j9b0SrI_AqSDU'
 				/>
 			</Head>
+			{/* <!-- Google tag (gtag.js) --> */}
+			<Script
+				async
+				src='https://www.googletagmanager.com/gtag/js?id=G-K86YRRN1TE'
+			></Script>
+			<Script
+				id='google-analytics'
+				strategy='afterInteractive'
+				dangerouslySetInnerHTML={{
+					__html: `
+				window.dataLayer = window.dataLayer || [];
+				function gtag(){dataLayer.push(arguments);}
+				gtag('js', new Date());
+				gtag('config', 'G-K86YRRN1TE', {
+				page_path: window.location.pathname,
+				});
+				`,
+				}}
+			/>
 			<Providers>
 				<Header
 					sectionRefs={{
