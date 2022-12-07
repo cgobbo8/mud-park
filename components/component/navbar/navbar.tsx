@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { useContext, useEffect, useState } from "react";
 import ModalContext, { ModalContextType } from "../../../contexts/ModalContext";
@@ -121,11 +122,15 @@ export const Navbar = ({ sectionRefs }: NavbarProps) => {
 	return (
 		<nav className={`${styles.navbar} ${isOnTop ? "" : styles.isNotOnTop}`}>
 			<div className={styles.left}>
-				<img
+				<Image
 					onClick={scrollToTop}
 					className={styles.logo}
 					src='/logo.svg'
 					alt='logo'
+					width={100}
+					height={100}
+					blurDataURL={"/logo.svg"}
+					placeholder='blur'
 				/>
 				<div className={styles.date}>Course le 27 Mai 2023</div>
 			</div>
@@ -168,10 +173,12 @@ export const Navbar = ({ sectionRefs }: NavbarProps) => {
 				</li>
 
 				<button onClick={handleModalOpening} className={styles["menu-cta"]}>
-					<img
+					<Image
 						className={styles["menu-cta-ticket"]}
 						src='/ticket.svg'
 						alt='ticket'
+						width={20}
+						height={20}
 					/>
 					Réserver
 				</button>

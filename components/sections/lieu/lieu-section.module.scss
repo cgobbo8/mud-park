@@ -58,6 +58,7 @@
 			transform: scaleX(-1);
 
 			object-fit: cover;
+			object-position: bottom;
 
 			filter: brightness(0.5) saturate(1.5);
 
@@ -69,9 +70,22 @@
 
 	&__content {
 		color: $text-color-light;
-		width: 400px;
+		width: 50%;
 		font-size: 1.5rem;
 		padding: 2rem 0;
+
+		:global {
+			a {
+				color: $accent;
+				// font-weight: 900;
+				font-style: italic;
+
+				&:hover {
+					color: $accent;
+					text-decoration: underline;
+				}
+			}
+		}
 
 		@media screen and (max-width: 700px) {
 			width: 90%;

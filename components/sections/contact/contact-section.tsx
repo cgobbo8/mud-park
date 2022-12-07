@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React, { useContext, useEffect } from "react";
 import ScrollContext, {
 	ScrollContextType,
@@ -33,9 +34,7 @@ const ContactSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 		})
 			.then((response) => response.json())
 
-			.then((data) => {
-				console.log("Success:", data);
-			})
+			.then((data) => {})
 			.catch((error) => {
 				console.error("Error:", error);
 			});
@@ -48,10 +47,14 @@ const ContactSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 					Des questions ? Contactez nous !
 				</h2>
 				<ContactForm />
-				<img
+				<Image
 					className={styles["contact-section-image"]}
 					src='/images/mail-min.png'
 					alt='hero with letter'
+					width={800}
+					height={800}
+					blurDataURL={"/images/mail-min.png"}
+					placeholder='blur'
 				/>
 			</div>
 		</section>

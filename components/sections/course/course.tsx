@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React, { useContext, useEffect, useMemo } from "react";
 import { useParallax } from "react-scroll-parallax";
 import ScrollContext, {
@@ -70,28 +71,20 @@ const CourseSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 
 	const { ref: parcoursRef } = useParallax<HTMLDivElement>({
 		onEnter: (value) => {
-			// console.log("Parcours Ref");
-			console.log(value);
-
 			switch (currentState) {
 				case CourseSectionState.INIT:
 					setCurrentState(CourseSectionState.PARCOURS_DRAW);
-					// console.log("In INIT to PARCOURS_DRAW");
-					// console.log("====================================");
 					break;
 				case CourseSectionState.PARCOURS_DRAW:
 					break;
 				case CourseSectionState.OBSTACLES_DRAW:
 					setCurrentState(CourseSectionState.PARCOURS_DRAW);
-					// console.log("In OBSTACLES_DRAW to PARCOURS_DRAW");
-					// console.log("====================================");
 					break;
 				case CourseSectionState.EVERYONE_DRAW:
 					break;
 				case CourseSectionState.KM_DRAW:
 					break;
 				default:
-					console.log("Default");
 					break;
 			}
 		},
@@ -99,23 +92,17 @@ const CourseSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 
 	const { ref: obstacleRef } = useParallax<HTMLDivElement>({
 		onEnter: () => {
-			// console.log("Obstacle Ref");
-
 			switch (currentState) {
 				case CourseSectionState.INIT:
 					setCurrentState(CourseSectionState.OBSTACLES_DRAW);
 					break;
 				case CourseSectionState.PARCOURS_DRAW:
 					setCurrentState(CourseSectionState.OBSTACLES_DRAW);
-					// console.log("In PARCOURS_DRAW to OBSTACLES_DRAW");
-					// console.log("====================================");
 					break;
 				case CourseSectionState.OBSTACLES_DRAW:
 					break;
 				case CourseSectionState.EVERYONE_DRAW:
 					setCurrentState(CourseSectionState.OBSTACLES_DRAW);
-					// console.log("In EVERYONE_DRAW to OBSTACLES_DRAW");
-					// console.log("====================================");
 					break;
 				case CourseSectionState.KM_DRAW:
 					break;
@@ -125,8 +112,6 @@ const CourseSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 
 	const { ref: forEveryoneRef } = useParallax<HTMLDivElement>({
 		onEnter: () => {
-			// console.log("For Everyone Ref");
-
 			switch (currentState) {
 				case CourseSectionState.INIT:
 					setCurrentState(CourseSectionState.EVERYONE_DRAW);
@@ -135,15 +120,11 @@ const CourseSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 					break;
 				case CourseSectionState.OBSTACLES_DRAW:
 					setCurrentState(CourseSectionState.EVERYONE_DRAW);
-					// console.log("In OBSTACLES_DRAW to EVERYONE_DRAW");
-					// console.log("====================================");
 					break;
 				case CourseSectionState.EVERYONE_DRAW:
 					break;
 				case CourseSectionState.KM_DRAW:
 					setCurrentState(CourseSectionState.EVERYONE_DRAW);
-					// console.log("In KM_DRAW to EVERYONE_DRAW");
-					// console.log("====================================");
 					break;
 			}
 		},
@@ -151,8 +132,6 @@ const CourseSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 
 	const { ref: kmRef } = useParallax<HTMLDivElement>({
 		onEnter: () => {
-			// console.log("Km Ref");
-
 			switch (currentState) {
 				case CourseSectionState.INIT:
 					setCurrentState(CourseSectionState.KM_DRAW);
@@ -163,18 +142,12 @@ const CourseSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 					break;
 				case CourseSectionState.EVERYONE_DRAW:
 					setCurrentState(CourseSectionState.KM_DRAW);
-					// console.log("In EVERYONE_DRAW to KM_DRAW");
-					// console.log("====================================");
 					break;
 				case CourseSectionState.KM_DRAW:
 					setCurrentState(CourseSectionState.EVERYONE_DRAW);
-					// console.log("In KM_DRAW to EVERYONE_DRAW");
-					// console.log("====================================");
 					break;
 				case CourseSectionState.SURPRISES_DRAW:
 					setCurrentState(CourseSectionState.KM_DRAW);
-					// console.log("In EVERYONE_DRAW to KM_DRAW");
-					// console.log("====================================");
 					break;
 			}
 		},
@@ -182,8 +155,6 @@ const CourseSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 
 	const { ref: surprisesRef } = useParallax<HTMLDivElement>({
 		onEnter: () => {
-			// console.log("Km Ref");
-
 			switch (currentState) {
 				case CourseSectionState.INIT:
 					setCurrentState(CourseSectionState.SURPRISES_DRAW);
@@ -196,13 +167,9 @@ const CourseSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 					break;
 				case CourseSectionState.KM_DRAW:
 					setCurrentState(CourseSectionState.SURPRISES_DRAW);
-					// console.log("In KM_DRAW to EVERYONE_DRAW");
-					// console.log("====================================");
 					break;
 				case CourseSectionState.SURPRISES_DRAW:
 					setCurrentState(CourseSectionState.KM_DRAW);
-					// console.log("In EVERYONE_DRAW to KM_DRAW");
-					// console.log("====================================");
 					break;
 			}
 		},
@@ -212,9 +179,7 @@ const CourseSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 		setCourseOnScreen(isIntersecting);
 	}, [isIntersecting, setCourseOnScreen]);
 
-	useEffect(() => {
-		console.log(currentState);
-	}, [currentState]);
+	useEffect(() => {}, [currentState]);
 
 	return (
 		<section ref={ref} className={styles.section}>
@@ -300,7 +265,7 @@ const CourseSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 								height: currentSquareSize,
 							}}
 						></div>
-						<img
+						<Image
 							className={`${styles.image__img} ${styles.image__img__parcours} ${
 								currentState === CourseSectionState.PARCOURS_DRAW
 									? styles.draw
@@ -308,8 +273,12 @@ const CourseSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 							}`}
 							src='/images/course/parcours-min.png'
 							alt='parcours'
+							width={466}
+							height={505}
+							blurDataURL={"/images/course/parcours-min.png"}
+							placeholder='blur'
 						/>
-						<img
+						<Image
 							className={`${styles.image__img} ${
 								styles.image__img__obstacles
 							} ${
@@ -319,8 +288,12 @@ const CourseSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 							}`}
 							src='/images/course/obstacles-min.png'
 							alt='obstacles'
+							height={611}
+							width={310}
+							blurDataURL={"/images/course/obstacles-min.png"}
+							placeholder='blur'
 						/>
-						<img
+						<Image
 							className={`${styles.image__img} ${styles.image__img__team} ${
 								currentState === CourseSectionState.EVERYONE_DRAW
 									? styles.draw
@@ -328,8 +301,12 @@ const CourseSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 							}`}
 							src='/images/course/team-min.png'
 							alt='team'
+							height={610}
+							width={420}
+							blurDataURL={"/images/course/team-min.png"}
+							placeholder='blur'
 						/>
-						<img
+						<Image
 							className={`${styles.image__img} ${
 								styles.image__img__double_parcours
 							} ${
@@ -337,8 +314,12 @@ const CourseSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 							}`}
 							src='/images/course/double_parcours-min.png'
 							alt='parcours'
+							height={610}
+							width={420}
+							blurDataURL={"/images/course/double_parcours-min.png"}
+							placeholder='blur'
 						/>
-						<img
+						<Image
 							className={`${styles.image__img} ${styles.image__img__suprises} ${
 								currentState === CourseSectionState.SURPRISES_DRAW
 									? styles.draw
@@ -346,6 +327,10 @@ const CourseSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 							}`}
 							src='/images/course/surprises-min.png'
 							alt='surprises'
+							height={610}
+							width={370}
+							blurDataURL={"/images/course/surprises-min.png"}
+							placeholder='blur'
 						/>
 					</div>
 				)}

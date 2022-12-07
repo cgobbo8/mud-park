@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React, { useContext, useEffect, useState } from "react";
 import ModalContext, { ModalContextType } from "../../../contexts/ModalContext";
@@ -98,10 +99,14 @@ const TarifSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 						Pas besoin d&apos;être 30 pour courir ?
 					</p>
 					<div className={styles.imageContainer}>
-						<img
+						<Image
 							className={styles.tarifImage}
 							src='/images/prices/duo-min.png'
 							alt='runner'
+							width={340}
+							height={300}
+							blurDataURL={"/images/prices/duo-min.png"}
+							placeholder='blur'
 						/>
 					</div>
 				</Link>
@@ -127,10 +132,14 @@ const TarifSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 						C&apos;est possible ! Bénificiez d&apos;un tarif préférentiel.
 					</p>
 					<div className={styles.imageContainer}>
-						<img
+						<Image
 							className={styles.tarifImage}
 							src='/images/prices/team-min.png'
 							alt='runner'
+							width={310}
+							height={300}
+							blurDataURL={"/images/prices/team-min.png"}
+							placeholder='blur'
 						/>
 					</div>
 				</Link>
@@ -156,10 +165,14 @@ const TarifSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 						bénéficiez d&apos;un tarif encore plus avantageux !
 					</p>
 					<div className={styles.imageContainer}>
-						<img
+						<Image
 							className={styles.tarifImage}
 							src='/images/prices/grosse_team-min.png'
 							alt='runner'
+							width={440}
+							height={300}
+							blurDataURL={"/images/prices/grosse_team-min.png"}
+							placeholder='blur'
 						/>
 					</div>
 				</Link>

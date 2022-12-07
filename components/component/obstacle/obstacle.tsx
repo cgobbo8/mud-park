@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { ObstacleType } from "../../../models";
 import styles from "./obstacle.module.scss";
@@ -8,7 +9,7 @@ type HEX = `#${string}`;
 
 type Color = RGB | RGBA | HEX;
 
-export const Obstacle = (props: ObstacleType) => {
+export const Obstacle = ({ image, name }: ObstacleType) => {
 	const [randomColor, setRandomColor] = useState<Color>();
 
 	useEffect(() => {
@@ -19,18 +20,20 @@ export const Obstacle = (props: ObstacleType) => {
 
 		let randomColor: Color = `#${r}${g}${b}`;
 
-		console.log(randomColor);
-
 		setRandomColor(randomColor);
 	}, []);
 
 	return (
 		<div className={styles.obstacle__item}>
 			<div className={styles.obstacle__item_top}>
-				<img
+				<Image
 					className={styles.obstacle__item_top_image}
-					src={props.image || ""}
-					alt={props.name}
+					src={image || ""}
+					alt={name}
+					width={260}
+					height={260}
+					blurDataURL={image}
+					placeholder='blur'
 				/>
 				<div
 					className={styles.obstacle__item_top_square}
@@ -38,7 +41,7 @@ export const Obstacle = (props: ObstacleType) => {
 				></div>
 			</div>
 
-			<div className={styles.obstacle__item_name}>{props.name}</div>
+			<div className={styles.obstacle__item_name}>{name}</div>
 		</div>
 	);
 };

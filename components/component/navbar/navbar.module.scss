@@ -36,6 +36,7 @@
 
 .logo {
 	height: 3rem;
+	width: auto;
 	cursor: pointer;
 	@media screen and (max-width: 400px) {
 		height: 2rem;
@@ -112,6 +113,7 @@
 		&-ticket {
 			color: #fff;
 			height: 0.7rem;
+			width: auto;
 			transform: rotate(130deg);
 			margin-right: 0.5em;
 		}

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { useMemo } from "react";
 import styles from "./footer.module.scss";
@@ -11,7 +12,15 @@ export const Footer = () => {
 		<footer className={styles.footer}>
 			{/* Top part */}
 			<div className={styles.top}>
-				<img className={styles.logo} src='/logo-white.svg' alt='' />
+				<Image
+					className={styles.logo}
+					src='/logo-white.svg'
+					alt='logo'
+					width={256}
+					height={100}
+					blurDataURL={"/logo-white.svg"}
+					placeholder='blur'
+				/>
 				<div className={styles.footer__item}>
 					<h3 className={styles.footer__title}>A propos</h3>
 					<p>
@@ -86,21 +95,36 @@ export const Footer = () => {
 						href='https://www.facebook.com/profile.php?id=100088002883843'
 						className={styles.social__link}
 					>
-						<img src='/images/socials/facebook.svg' alt='' />
+						<Image
+							src='/images/socials/facebook.svg'
+							alt='facebook-icon'
+							width={24}
+							height={24}
+						/>
 					</Link>
 					<Link
 						target='_blank'
 						href='https://www.instagram.com/mud_park/?next=%2F'
 						className={styles.social__link}
 					>
-						<img src='/images/socials/instagram.svg' alt='' />
+						<Image
+							src='/images/socials/instagram.svg'
+							alt='instagram-icon'
+							width={24}
+							height={24}
+						/>
 					</Link>
 					<Link
 						target='_blank'
 						href='tel:+336 09 28 25 49'
 						className={styles.social__link}
 					>
-						<img src='/images/socials/whatsapp.svg' alt='' />
+						<Image
+							src='/images/socials/whatsapp.svg'
+							alt='whatsapp-icon'
+							width={24}
+							height={24}
+						/>
 					</Link>
 				</div>
 			</div>

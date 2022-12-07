@@ -9,9 +9,19 @@ const LieuSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 				<h2 className={styles.title}>Lieu</h2>
 				<div className={styles["lieu-section__content"]}>
 					<p>
-						Nous avons la chance de pouvoir effectuer la course dans
-						l&apos;enceinte de l&apos;Abbaye École de Sorèze. Ce lieu historique
-						héberge en son sein un magnifique parc.
+						Le département du Tarn regorge de sites historiques à explorer, et
+						la cité de Sorèze en fait partie. En effet l&apos;Abbaye de Sorèze
+						est membre des{" "}
+						<Link href='https://www.grands-sites-occitanie.fr' target='_blank'>
+							Grands Sites d&apos;Occitanie.
+						</Link>{" "}
+						et sa proximité avec de grandes villes comme Toulouse, Albi, ou
+						encore Carcassonne, en fait un lieu de passage incontournable de la
+						région.
+						<br />
+						<br />
+						Avec MUD PARK, nous avons la chance de pouvoir profiter de ce lieu.
+						Et de courir dans un parc magnifique et unique.
 					</p>
 				</div>
 				<Link

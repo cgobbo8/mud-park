@@ -47,7 +47,6 @@ export const ContactForm = () => {
 		})
 			.then((response) => response.json())
 			.then((data: DataResponse) => {
-				console.log("Success:", data);
 				if (data.success) {
 					setForm({
 						type_contact: "Particulier",
@@ -106,8 +105,6 @@ export const ContactForm = () => {
 			form.objet_message === "" ||
 			form.message === ""
 		) {
-			console.log("invalid form");
-
 			setIsFormValid(() => false);
 		} else {
 			setIsFormValid(() => true);
