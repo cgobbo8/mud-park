@@ -221,6 +221,10 @@ const CourseSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 							<br />
 							Structures gonflables, légos géants, ils s&apos;amuseront comme
 							les grands ! Et évidemment, la course sera offerte pour eux !
+							<br />
+							<br />À noter que les enfants de + de 6 ans pourront également
+							participer à la course adulte, dans ce cas là, ils seront comptés
+							comme participants et l&apos;inscription sera au tarif normal.
 						</p>
 					</div>
 					<div ref={kmRef} className={styles["course-content-text-bloc"]}>

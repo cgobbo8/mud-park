@@ -183,15 +183,30 @@ const TarifSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 				billetterie
 			</p>
 			<p className={styles.clauses}>
-				*Gratuit pour les enfants de moins de 14 ans, veuillez nous{" "}
+				*Gratuit pour les enfants de moins de 14 ans qui participeront aux
+				activités enfants, veuillez nous{" "}
 				<span onClick={scrollToContact} className='accent link'>
 					contacter
 				</span>{" "}
 				si vous en avez !
 			</p>
 			<p className={styles.clauses}>
+				*Tarif normal pour les enfants de + de 6 ans qui participeront à la
+				course normale.
+			</p>
+			<p className={styles.clauses}>
 				*MUD PARK est un évènement sportif, vous devez donc obligatoirement être
 				munis d&apos;un certificat medical valide pour particper à la course.
+				Vous devez également remplir l&apos;
+				<Link
+					className='accent link'
+					href='/attestation.pdf'
+					target='_blank'
+					download
+				>
+					attestation
+				</Link>{" "}
+				pour le jour de la course.
 			</p>
 		</section>
 	);

@@ -83,3 +83,26 @@
 		gap: 0.75rem;
 	}
 }
+
+.rules {
+	margin-top: 1rem;
+}
+
+.left_bloc {
+	display: flex;
+	flex-direction: column;
+}
+
+.top_rule {
+	display: none;
+	@media screen and (max-width: 700px) {
+		display: block;
+	}
+}
+
+.bottom_rule {
+	display: inline-block;
+	@media screen and (max-width: 700px) {
+		display: none;
+	}
+}

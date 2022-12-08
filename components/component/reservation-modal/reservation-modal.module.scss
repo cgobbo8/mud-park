@@ -39,6 +39,7 @@
 	:global {
 		.message {
 			display: flex;
+			align-self: flex-start;
 
 			span {
 				margin-right: 1rem;
@@ -115,5 +116,14 @@
 
 	&:hover {
 		transform: scale(0.98);
+	}
+}
+
+.link {
+	color: $accent;
+
+	&:hover {
+		text-decoration: underline;
+		color: #fa9980;
 	}
 }

@@ -31,7 +31,30 @@ export const ReservationModal = () => {
 					<p>
 						MUD PARK étant un évènement sportif, vous devez{" "}
 						<strong>obligatoirement</strong> avoir un certificat médical valide
-						et à jour le jour de la course !
+						et à jour le jour de la course (moins d&apos;1 an) !
+					</p>
+				</div>
+				<div className='message'>
+					<span>⚠️</span>
+					<p>
+						Pour pouvoir participer le jour de la course, il faudra que chaque
+						participant présente l&apos;attestation suivante remplie et signée:{" "}
+						<Link
+							className={styles.link}
+							href='/attestation.pdf'
+							target='_blank'
+							download
+						>
+							Attestation.pdf
+						</Link>
+					</p>
+				</div>
+				<div className='message'>
+					<span>⚠️</span>
+					<p>
+						Veuillez vous présenter avec une pièce d&apos;identité en cours de
+						validité (CNI, passeport, permis de conduire, livret de famille pour
+						les mineurs n&apos;ayant pas de pièce)
 					</p>
 				</div>
 				<div className='message'>
@@ -40,6 +63,10 @@ export const ReservationModal = () => {
 						Choisissez bien votre créneau horaire sur la billetterie, vous ne
 						pourrez pas changer de créneau une fois votre réservation effectuée.
 					</p>
+				</div>
+				<div className='message'>
+					<span>ℹ️</span>
+					<p>Vous recevrez votre E-billet par mail après votre inscription.</p>
 				</div>
 
 				<Link

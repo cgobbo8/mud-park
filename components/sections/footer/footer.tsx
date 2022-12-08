@@ -21,6 +21,7 @@ export const Footer = () => {
 					blurDataURL={"/logo-white.svg"}
 					placeholder='blur'
 				/>
+
 				<div className={styles.footer__item}>
 					<h3 className={styles.footer__title}>A propos</h3>
 					<p>
@@ -82,12 +83,31 @@ export const Footer = () => {
 							</Link>
 						</li>
 					</ul>
+					<span>
+						<Link
+							className={`${styles.top_rule} accent link`}
+							href='/reglement.pdf'
+							target='_blank'
+							download
+						>
+							Téléchargement du règlement
+						</Link>
+					</span>
 				</div>
 			</div>
 			{/* Bottom part */}
 			<div className={styles.bottom}>
 				<div className={styles.bottom__left}>
-					Copyright © {currentYear} MudPark | Tous droits réservés
+					Copyright © {currentYear} MudPark | Tous droits réservés{" "}
+					<span className={`${styles.bottom_rule} `}>|</span>{" "}
+					<Link
+						className={`${styles.bottom_rule} accent link`}
+						href='/reglement.pdf'
+						target='_blank'
+						download
+					>
+						Téléchargement du règlement
+					</Link>
 				</div>
 				<div className={styles.bottom__right}>
 					<Link
