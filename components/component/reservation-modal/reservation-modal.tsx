@@ -53,8 +53,8 @@ export const ReservationModal = () => {
 					<span>⚠️</span>
 					<p>
 						Veuillez vous présenter avec une pièce d&apos;identité en cours de
-						validité (CNI, passeport, permis de conduire, livret de famille pour
-						les mineurs n&apos;ayant pas de pièce)
+						validité le jour de la course (CNI, passeport, permis de conduire,
+						livret de famille pour les mineurs n&apos;ayant pas de pièce)
 					</p>
 				</div>
 				<div className='message'>
